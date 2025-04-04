@@ -1,0 +1,59 @@
+
+.header {
+    display: flex;
+    height: 53px;
+    justify-content: space-between;
+    align-items: center;
+    // border: 1px solid green;
+    font-family: "Poppins", sans-serif;
+
+    .lists {
+        display: flex;
+        gap: 50px;
+
+        .home {
+            font-weight: 600;
+        }
+
+        a {
+            color: #3D3D3D;
+        }
+
+        a:hover {
+            color: #46A358;
+            transition: 0.5s;
+        }
+    }
+
+    .search {
+        display: flex;
+        gap: 30px;
+
+        .login {
+            
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 15px;
+                width: 100px;
+                height: 35px;
+                border-radius: 6px;
+                background-color: #46A358;
+                color: white;
+                border: none;
+                font-weight: 600;
+                cursor: pointer;
+
+                img {
+                    width: 20px;
+                }
+            }
+
+            button:hover {
+                transition: 0.8s;
+                box-shadow: 0 0 10px 0 #328843;
+            }
+        }
+    }
+}
