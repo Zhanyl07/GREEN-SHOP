@@ -2,10 +2,10 @@ import React from 'react'
 import "../Header/Header.scss"
 import { Link } from 'react-router-dom'
 
-import logo from "../../assets/svg/logo.svg"
-import search from "../../assets/svg/search.svg"
-import cart from "../../assets/svg/cart.svg"
-import login from "../../assets/svg/login.svg"
+// import logo from "../../assets/svg/logo.svg"
+// import search from "../../assets/svg/search.svg"
+// import cart from "../../assets/svg/cart.svg"
+// import login from "../../assets/svg/login.svg"
 
 function Header() {
   return (
@@ -13,7 +13,7 @@ function Header() {
       <div className='header container'>
 
         <div className='logo'>
-          <img src={logo} alt="" />
+          {/* <img src={logo} alt="" /> */}
         </div>
 
         <div className='lists'>
@@ -24,11 +24,11 @@ function Header() {
         </div>
 
         <div className='search'>
-            <img src={search} alt="" />
-            <img src={cart} alt="" />
+            {/* <img src={search} alt="" />
+            <img src={cart} alt="" /> */}
           <div className='login'>
             <button>
-              <img src={login} alt="" />
+              {/* <img src={login} alt="" /> */}
               Login
             </button>
           </div>
