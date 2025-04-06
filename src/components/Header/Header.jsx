@@ -1,7 +1,6 @@
 import React from 'react'
 import "../Header/Header.scss"
 import { Link } from 'react-router-dom'
-
 import logo from "../../assets/svg/logo.svg"
 import search from "../../assets/svg/search.svg"
 import cart from "../../assets/svg/cart.svg"
