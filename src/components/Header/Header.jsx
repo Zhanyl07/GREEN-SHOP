@@ -12,9 +12,9 @@ function Header() {
     <div>
       <div className='header container'>
 
-        <div className='logo'>
+        <Link to="/" className='logo'>
           <img src={logo} alt="" />
-        </div>
+        </Link>
 
         <div className='lists'>
           <Link className='home' to="/">Home</Link>
