@@ -1,0 +1,183 @@
+.footer {
+    font-family: "Poppins", sans-serif;
+
+    .in-footer {
+
+        .top {
+            display: flex;
+            width: 1152px;
+            height: 201px;
+            margin: 0 auto;
+            margin-bottom: 100px;
+            gap: 70px;
+
+            .input {
+
+                .top-input {
+
+                    input {
+                        width: 264px;
+                        height: 40px;
+                        padding: 10px;
+                        border: none;
+                        border-radius: 6px 0 0 6px;
+                        box-shadow: 0 0 10px 0 rgb(190, 187, 187);
+                        margin-top: 18px;
+                        margin-bottom: 17px;
+                    }
+
+                    input:focus {
+                        outline: none;
+                        border: none;
+                    }
+
+                    button {
+                        width: 85px;
+                        height: 40px;
+                        border: none;
+                        background-color: #46A358;
+                        color: white;
+                        font-size: 17px;
+                        font-weight: 600;
+                        border-radius: 0 6px 6px 0;
+                        box-shadow: 0 0 10px 0 rgb(157, 155, 155);
+                        cursor: pointer;
+                    }
+
+                    button:hover {
+                        transition: 0.8s;
+                        box-shadow: 0 0 10px 0 #328843;
+                    }
+                }
+
+                p {
+                    font-size: 13px;
+                    color: #727272;
+                }
+
+                h3 {
+                    font-size: 18px;
+                }
+            }
+
+            .garden {
+                position: relative;
+                border-right: 1px solid #e9e6e6;
+
+                .plant1-bc {
+                    top: 20px;
+                    position: relative;
+                }
+    
+                .plant1 {
+                    display: grid;
+                    position: absolute;
+                    left: 20px;
+                    top: -5px;
+                }
+
+                .plant2-bc {
+                    top: 20px;
+                    position: relative;
+                }
+    
+                .plant2 {
+                    display: grid;
+                    position: absolute;
+                    left: 15px;
+                }
+
+                .plant3-bc {
+                    top: 20px;
+                    position: relative;
+                }
+    
+                .plant3 {
+                    display: grid;
+                    position: absolute;
+                    left: 10px;
+                    top: 5px;
+                }
+
+                h3 {
+                    margin-top: 20px;
+                    margin-bottom: 9px;
+                    font-size: 17px;
+                }
+
+                p {
+                    font-size: 14px;
+                    color: #727272;
+                }
+
+            }
+        }
+    
+        .center {
+            display: flex;
+            height: 88px;
+            background-color: #46A3581A;
+            border-top: 1px solid #95cea0;
+            border-bottom: 1px solid #95cea0;
+            gap: 60px;
+            display: flex;
+            align-items: center;
+            font-size: 14px;
+
+            .logo {
+                margin-left: 30px;
+            }
+
+            .location {
+                display: flex;
+                gap: 5px;
+                width: 250px;
+            }
+
+            .email {
+                display: flex;
+                gap: 5px;
+            }
+
+            .call {
+                display: flex;
+                gap: 5px;
+            }
+            
+        }
+
+        .bottom {
+            display: flex;
+            gap: 166px;
+            padding: 32px;
+
+            h3 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                margin-bottom: 8px;
+                font-size: 14px;
+                color: #3D3D3D;
+            }
+
+            .social-media {
+
+                .social-programs {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 20px;
+
+                    img {
+                        border: 1px solid #afd8b8;
+                        padding: 8px;
+                        border-radius: 6px;
+                        cursor: pointer;
+                    }
+                }
+            }
+
+        }
+    }
+}
