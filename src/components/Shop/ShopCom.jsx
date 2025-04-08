@@ -19,10 +19,11 @@ function ShopCom() {
   return (
     <div className='shop'>
     <div className="home-shop">
-        <Link className='shophome' to={"/"}>Home </Link>
+        <Link className='shophome' to={"/productcheckout"}>Home </Link>
         /
         <Link className='shopshop' to={"/shop"}> Shop</Link>
-        /
+        
+        
 
     </div>
 

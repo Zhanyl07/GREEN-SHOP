@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import Shopm from './pages/Shopm'
 import Cart from "./pages/Cart";
 import ShopingCartPage from "./pages/ShopingCartPage";
+import ProductCheckout from "./pages/ProductCheckout";
 export const myRouter = createBrowserRouter ([
     {
         path: "/",
@@ -25,6 +26,10 @@ export const myRouter = createBrowserRouter ([
       {
         path: "/shopingcart",
         element: <ShopingCartPage/>
+      },
+      {
+        path: "/productcheckout",
+        element: <ProductCheckout/>
       }
     ]
 

@@ -1,0 +1,131 @@
+.check{
+    font-family: "Poppins", sans-serif;
+    width: 1200px;
+    border: 1px solid black;
+    margin: 0 auto;
+
+    .home-check {
+        display: flex;
+        gap: 5px;    
+        .check-home {
+          font-weight: 600;
+        }
+    
+        a {
+          color: #3d3d3d;
+        }
+        
+    
+        a:hover {
+          color: rgb(70, 163, 88);
+          transition: 0.5s;
+        }
+      }
+
+
+      .check-block{
+        width: 1200px;
+        border: 1px solid black;
+        margin-top: 36px;
+        display: flex;
+        gap: 78px;
+
+
+        .left-check{
+            
+                    h3{
+                        color: rgb(61, 61, 61);
+                        font-size: 17px;
+                        font-weight: 700;
+                    }
+
+                    .oll-check{
+                        display: flex;
+                        gap: 22px;
+
+                        .component{
+                            margin-top: 21px;
+                            .com-text{
+                                display: flex;
+                                gap: 3px;
+
+
+                                p{
+                                    color: rgb(61, 61, 61);
+                                    font-size: 15px;
+                                    font-weight: 400;
+                                }
+                                h4{
+                                    color: rgb(240, 56, 0);
+                                    font-size: 22px;
+                                    font-weight: 400;
+                                }
+                            }
+                        }
+
+                        input{
+                            width: 350px;
+                            height: 40px;
+                            box-sizing: border-box;
+                            border: 1px solid rgb(234, 234, 234);
+                            border-radius: 3px;
+                            padding-left: 13px;
+                        }
+
+                        
+                    }
+                    .radio{
+                        display: flex;
+                        gap: 7px;
+                        margin-top: 31px;
+
+                        p{
+                            color: rgb(61, 61, 61);
+                            font-size: 15px;
+                            font-weight: 500;
+                            line-height: 16px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+
+
+                    }
+
+                    .order{
+                        margin-top: 54px;
+                        p{
+                            color: rgb(61, 61, 61);
+                            font-size: 15px;
+                            font-weight: 400;
+                            line-height: 15px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                        .div{
+                            box-sizing: border-box;
+                            border: 1px solid rgb(234, 234, 234);
+                            border-radius: 3px;
+                            width: 350px;
+                            height: 152px;
+                            margin-top: 10px;
+
+
+                        }
+                    }
+
+        }
+
+        .right-check{
+            
+            h3{
+                color: rgb(61, 61, 61);
+                font-size: 17px;
+                font-weight: 700;
+
+            }
+            
+
+        }
+
+      }
+}
