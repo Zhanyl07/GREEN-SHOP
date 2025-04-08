@@ -23,8 +23,12 @@ function Header() {
         </div>
 
         <div className='search'>
+          <Link to={"/search"}>
             <img src={search} alt="" />
+            </Link>
+            <Link to={"/cart"}>
             <img src={cart} alt="" />
+            </Link>
           <div className='login'>
             <button>
               <img src={login} alt="" />
