@@ -1,0 +1,412 @@
+.shop {
+    font-family: "Poppins", sans-serif;
+    margin-top: 47px;
+  
+    button {
+      cursor: pointer;
+    }
+  
+    .home-shop {
+      display: flex;
+      gap: 5px;
+      margin-left: 121px;
+  
+      .shophome {
+        font-weight: 600;
+      }
+  
+      a {
+        color: #3d3d3d;
+      }
+  
+      a:hover {
+        color: rgb(70, 163, 88);
+        transition: 0.5s;
+      }
+    }
+  
+    .shop-product {
+      width: 1198px;
+      height: 448px;
+      margin: 0 auto;
+      display: flex;
+      gap: 52px;
+      margin-top: 43px;
+  
+      .shop-img {
+        width: 573px;
+        height: 448px;
+        position: relative;
+  
+        .shop-search {
+          position: absolute;
+          right: 0;
+          width: 35px;
+          height: 30px;
+          top: 23px;
+        }
+      }
+  
+      .shop-flover {
+        display: flex;
+        gap: 46px;
+  
+        .flover1 {
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+  
+          img {
+            width: 100px;
+            height: 100px;
+          }
+  
+          img:hover {
+            box-sizing: border-box;
+            border: 1px solid rgb(70, 163, 88);
+            background: url(image);
+          }
+        }
+  
+        .flover2 {
+          img {
+            width: 404px;
+            height: 404px;
+          }
+        }
+      }
+  
+      .shop-daisy {
+        width: 574px;
+        height: 446px;
+  
+        .daisy-text {
+          display: flex;
+          flex-direction: column;
+          gap: 21px;
+  
+          h2 {
+            color: rgb(61, 61, 61);
+            font-size: 28px;
+            font-weight: 700;
+            line-height: 16px;
+            text-align: left;
+          }
+  
+          .daisy-price {
+            display: flex;
+            gap: 261px;
+  
+            .stars {
+              display: flex;
+              gap: 5px;
+            }
+  
+            p {
+              color: rgb(70, 163, 88);
+              font-size: 22px;
+              font-weight: 600;
+              line-height: 16px;
+            }
+  
+            span {
+              height: 16px;
+              color: rgb(61, 61, 61);
+              font-family: Cera Pro;
+              font-size: 15px;
+              font-weight: 400;
+              line-height: 16px;
+              text-align: left;
+            }
+          }
+        }
+  
+        .shop-border {
+          width: 573px;
+          border: 0.3px solid rgba(70, 163, 88, 0.5);
+          margin-top: 12px;
+        }
+  
+        .short {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          margin-top: 15px;
+  
+          h3 {
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 16px;
+            text-align: left;
+          }
+  
+          p {
+            width: 620px;
+            height: 66px;
+            color: rgb(114, 114, 114);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 24px;
+            text-align: left;
+          }
+        }
+      }
+  
+      .shop-size {
+        margin-top: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+  
+        .size {
+          display: flex;
+          flex-direction: column;
+          gap: 11px;
+  
+          p {
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 16px;
+            text-align: left;
+          }
+  
+          .size-img {
+            display: flex;
+            gap: 10px;
+  
+            p {
+              width: 28px;
+              height: 28px;
+              border: 1px solid rgb(234, 234, 234);
+              border-radius: 50%;
+              text-align: center;
+              padding-top: 5px;
+            }
+  
+            p:hover {
+              border: 1px solid rgb(70, 163, 88);
+              transition: 0.5s;
+            }
+          }
+        }
+  
+        .shop-button {
+          display: flex;
+          gap: 26px;
+  
+          .minus-btn {
+            display: flex;
+            gap: 63px;
+            position: relative;
+  
+            p {
+              color: rgb(61, 61, 61);
+              font-size: 20px;
+              font-weight: 400;
+              line-height: 10px;
+              position: absolute;
+              top: 13px;
+              left: 59px;
+            }
+  
+            button {
+              width: 33px;
+              height: 38px;
+              border-radius: 29px;
+              background: linear-gradient(180deg, rgb(70, 163, 88), rgba(70, 163, 88, 0.8));
+              border: none;
+              color: white;
+              font-size: 22px;
+            }
+          }
+  
+          .buy-btn {
+            display: flex;
+            gap: 10px;
+  
+            button {
+              border-radius: 6px;
+              background: rgb(70, 163, 88);
+              width: 130px;
+              height: 40px;
+              border: none;
+              color: white;
+              font-size: 14px;
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+  
+            button:hover {
+              color: rgb(70, 163, 88);
+              background: white;
+              border: 1px solid rgb(70, 163, 88);
+              transition: 0.5s;
+            }
+          }
+  
+          .wish-btn {
+            button {
+              width: 40px;
+              height: 40px;
+              border: 1px solid rgb(70, 163, 88);
+              border-radius: 6px;
+              padding: 12px 10px 10px 9px;
+              margin-left: -12px;
+  
+              img {
+                width: 20px;
+                height: 17.79px;
+              }
+            }
+          }
+        }
+      }
+  
+      .shop-sku {
+        margin-top: 26px;
+  
+        .sku {
+          display: flex;
+          gap: 8px;
+          margin-top: 10px;
+  
+          p {
+            color: #9c9999;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+  
+          span {
+            color: #636363;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 16px;
+          }
+        }
+  
+        .share {
+          margin-top: 13px;
+          display: flex;
+          gap: 16px;
+        }
+      }
+    }
+  
+    .description {
+      width: 1200px;
+      height: 500px;
+      margin: 0 auto;
+      margin-top: 92px;
+  
+      .des-link {
+        display: flex;
+        gap: 30px;
+  
+        .des-product,
+        .des-reviews {
+          font-size: 17px;
+          font-weight: 700;
+          line-height: 16px;
+          color: rgb(61, 61, 61);
+        }
+  
+        .des-product:hover,
+        .des-reviews:hover {
+          color: rgb(70, 163, 88);
+          text-decoration: underline;
+          transition: 0.5s;
+        }
+      }
+  
+      .line {
+        border: 0.3px solid rgba(70, 163, 88, 0.5);
+        width: 1200px;
+        margin-top: 11px;
+      }
+  
+      .des-lorem {
+        color: rgb(114, 114, 114);
+        font-size: 14px;
+        line-height: 24px;
+        width: 1199px;
+        height: 90px;
+        margin-top: 19px;
+      }
+  
+      .living {
+        margin-top: 18px;
+  
+        h4 {
+          color: rgb(61, 61, 61);
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24px;
+        }
+  
+        p {
+          color: rgb(114, 114, 114);
+          font-size: 14px;
+          line-height: 24px;
+          width: 1199px;
+          height: 46px;
+        }
+      }
+    }
+  
+    .releted {
+      width: 1200px;
+      height: 449px;
+      margin: 0 auto;
+      margin-top: 127px;
+  
+      .line {
+        border: 0.3px solid rgba(70, 163, 88, 0.5);
+        margin-top: 11px;
+      }
+  
+      h3 {
+        color: rgb(70, 163, 88);
+        font-size: 17px;
+        font-weight: 700;
+        line-height: 16px;
+      }
+  
+      .oll {
+        display: flex;
+        width: 1200px;
+        overflow-y: scroll;
+        gap: 30px;
+        margin-top: 61px;
+  
+        .rel-product {
+          img {
+            width: 190px;
+            height: 243px;
+            object-fit: cover;
+          }
+  
+          width: 219px;
+          padding: 5px 11px 7px 18px;
+  
+          .rel-text {
+            margin-left: -18px;
+  
+            p {
+              color: rgb(61, 61, 61);
+              font-size: 15px;
+            }
+  
+            span {
+              color: rgb(70, 163, 88);
+              font-size: 16px;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+  
