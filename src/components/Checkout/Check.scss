@@ -1,7 +1,6 @@
 .check{
     font-family: "Poppins", sans-serif;
     width: 1200px;
-    border: 1px solid black;
     margin: 0 auto;
 
     .home-check {
@@ -25,7 +24,6 @@
 
       .check-block{
         width: 1200px;
-        border: 1px solid black;
         margin-top: 36px;
         display: flex;
         gap: 78px;
@@ -121,9 +119,295 @@
                 color: rgb(61, 61, 61);
                 font-size: 17px;
                 font-weight: 700;
+                
 
             }
+            .subtotal{
+                width: 405px;
+                display: flex;
+                justify-content: space-between;
+                margin-top: 21px;
+
+                p{
+                    color: rgb(61, 61, 61);
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 16px;
+                }
+            }
+            .line{
+                width: 405px;
+                border: 0.3px solid rgba(70, 163, 88, 0.5);
+                margin-top: 10px;
+
+            }
+
+            .product1{
+                width: 404px;
+                height: 70px;
+                background: rgb(251, 251, 251);
+                margin-top: 10px;
+                display: flex;
+                align-items: center;
+
+                img{
+                    width: 70px;
+                    height: 70px;
+
+                }
+
+                .all-daisy{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 6px;
+                    margin-left: 11px;
+                    .pro-daisy{
+                        p{
+                            color: rgb(61, 61, 61);
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 16px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                        }
+                    }
+
+                    .sku{
+                        display: flex;
+                        p{
+                                font-size: 14px;
+                                font-weight: 400;
+                                line-height: 16px;
+                                letter-spacing: 0%;
+                                text-align: left;
+                                color: rgb(165, 165, 165);
+                        }
+                        span{
+                            
+                            font-size: 14px;
+                            font-weight: 400;
+                            line-height: 16px;
+                            letter-spacing: 0%;
+                            text-align: left;
+                            color: rgb(114, 114, 114);
+
+                        }
+                    }
+                }
+                .x2{
+                    margin-left: 42px;
+                    p{
+                        color: rgb(114, 114, 114);
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        text-align: right;
+                    }
+                }
+                .pro-price{
+                    span{
+                        color: rgb(70, 163, 88);
+                        font-size: 18px;
+                        font-weight: 700;
+                        line-height: 16px;
+                        letter-spacing: 0%;
+                        text-align: right;
+                        margin-left: 37px;
+                    }
+                }
+
+            }
+            .click{
+                margin-top: 17px;
+                p{
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 16px;
+                    letter-spacing: 0%;
+                    text-align: right;
+                    a{
+                        color: rgb(70, 163, 88);
+                    }
+                }
+            }
+            .cartochka{
+                display: flex;
+                width: 321px;
+                margin-top: 15px;
+                justify-content: space-between;
+                margin-left: 75px;
+
+                .ctka-text{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    p{
+                        color: rgb(61, 61, 61);
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        
+                    }
+                }
+                .ctka-price{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 15px;
+                    
+
+                    p{
+                        color: rgb(61, 61, 61);
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 16px;
+
+                    }
+                    .coupon{
+                        color: rgb(61, 61, 61);
+                        font-size: 15px;
+                        font-weight: 400;
+                        line-height: 16px;
+                        margin-left: 20px;
+                    }
+                    h3{
+                        color: rgb(61, 61, 61);
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 16px;
+                        margin-left: 30px;
+
+                    }
+
+                    
+                }
+
+               
+                
+            }
+
+            .view{
+                color: rgb(70, 163, 88);
+                font-size: 12px;
+                font-weight: 400;
+                line-height: 16px;
+                margin-left: 260px;
+                margin-top: 6px;
+                
+            }
+          .view-total{
+            display: flex;
+            justify-content: space-between;
+            margin-top: 16px;
+            p{
+                color: rgb(61, 61, 61);
+                font-size: 16px;
+                font-weight: 700;
+            }
+            span{
+                color: rgb(70, 163, 88);
+                font-size: 18px;
+                font-weight: 700;
+               
+            }
+          }
+
+          .custom-radio {
+            width: 321px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            font-size: 16px;
+            color: #222;
+            margin-top: 12px;
+            border: 1px solid rgb(234, 234, 234);
+            border-radius: 3px;
+            gap: 6px;
+
+          
+            input[type="radio"] {
+              display: none;
+          
+              &:checked + .checkmark::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 8px;
+                height: 8px;
+                background-color: rgb(70, 163, 88);
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+                
+              }
+            }
+          
+            .checkmark {
+              width: 16px;
+              height: 16px;
+              border: 1.2px solid rgb(70, 163, 88);
+              border-radius: 50%;
+              margin-right: 10px;
+              position: relative;
+            margin-left: 14px;
+            box-sizing: border-box;
+            }
+    .check-img{
+        width: 224px;
+        display: flex;
+        justify-content: space-between;
+        img{
+            height: 26px;
+
+        }
+        .master{
+            height: 26px;
+            object-fit: cover;
+            margin-top: 15px;
+
+        }
+        .paypal{
+            height: 56px;
+            object-fit: cover;
+
+        }
+        .visa{
+            height: 26px;
+            object-fit: cover;
+            margin-top: 15px;
+
+        }
+        .american{
+            height: 46px;
+            margin-top: 6px;
+            object-fit: cover;
             
+        }
+    }
+    
+          }
+          
+
+
+          
+       .place-btn{
+        button{
+            width: 321px;
+            height: 40px;
+            border-radius: 3px;
+            background: rgb(70, 163, 88);
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 0%;
+            border: none;
+            margin-top: 49px;
+        }
+      
+
+       }
 
         }
 

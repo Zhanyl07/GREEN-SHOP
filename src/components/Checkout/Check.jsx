@@ -1,5 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import productcheck from '../../assets/image/productcheck.png'
+import visa from '../../assets/image/visa.png'
+import paypal from '../../assets/image/paypal.png'
+import mastercard from '../../assets/image/mastercard.png'
+import american from '../../assets/image/american.png'
 import './Check.scss'
 function Check() {
   return (
@@ -146,6 +151,158 @@ function Check() {
         </div>
         <div className="right-check">
             <h3>Your Order</h3>
+            <div className="subtotal">
+                <p>Products</p>
+                <p>Subtotal</p>
+            </div>
+            <div className="line"></div>
+
+            <div className="product1">
+                <img src={productcheck} alt="" />
+
+                <div className="all-daisy">
+
+                <div className="pro-daisy">
+                    <p>Barberton Daisy</p>
+                </div>
+                <div className="sku">
+                    <p>SKU:</p>
+                    <span>1995751877966</span>
+                </div>
+                </div>
+
+                <div className="x2">
+                    <p>(x 2)</p>
+                </div>
+                <div className="pro-price">
+                    <span>$238.00</span>
+                </div>
+
+            </div>
+
+            <div className="product1">
+                <img src={productcheck} alt="" />
+
+                <div className="all-daisy">
+
+                <div className="pro-daisy">
+                    <p>Barberton Daisy</p>
+                </div>
+                <div className="sku">
+                    <p>SKU:</p>
+                    <span>1995751877966</span>
+                </div>
+                </div>
+
+                <div className="x2">
+                    <p>(x 2)</p>
+                </div>
+                <div className="pro-price">
+                    <span>$238.00</span>
+                </div>
+
+            </div>
+
+            <div className="product1">
+                <img src={productcheck} alt="" />
+
+                <div className="all-daisy">
+
+                <div className="pro-daisy">
+                    <p>Barberton Daisy</p>
+                </div>
+                <div className="sku">
+                    <p>SKU:</p>
+                    <span>1995751877966</span>
+                </div>
+                </div>
+
+                <div className="x2">
+                    <p>(x 2)</p>
+                </div>
+                <div className="pro-price">
+                    <span>$238.00</span>
+                </div>
+
+            </div>
+
+            <div className="click">
+                <p>Have a coupon code? <a href="">Click here</a>
+                </p>
+            </div>
+
+            <div className="cartochka">
+                <div className="ctka-text">
+                    <p>Subtotal</p>
+                    <p>Coupon Discount</p>
+                    <p>Shoping</p>
+                </div>
+                <div className="ctka-price">
+                    <p>$2,683.00</p>
+                    <span className='coupon'>(-) 00.00</span>
+                    <h3>$16.00</h3>
+                </div>
+            </div>
+
+            <a className='view' href="">View shipping charge</a>
+            <div className="line"></div>
+
+            <div className="view-total">
+                <p>Total</p>
+                <span>$2,699.00</span>
+
+            </div>
+
+            <div className="payment">
+  <h3>Payment Method</h3>
+
+  <label className="custom-radio">
+    <input
+      type="radio"
+      name="payment"
+      value="cash"
+      defaultChecked
+    />
+    <span className="checkmark"></span>
+    <div className="check-img">
+        <img className='paypal' src={paypal} alt="" />
+        <img className='master' src={mastercard} alt="" />
+        <img className='visa' src={visa} alt="" />
+        <img className='american' src={american} alt="" />
+    </div>
+
+  </label>
+
+  <label className="custom-radio">
+    <input
+      type="radio"
+      name="payment"
+      value="card"
+    />
+    <span className="checkmark"></span>
+    <span>Dorect bank transfer</span>
+  </label>
+
+  <label className="custom-radio">
+    <input
+      type="radio"
+      name="payment"
+      value="card"
+    />
+    <span className="checkmark"></span>
+    <span>Cash on delivery</span>
+  </label>
+</div>
+
+<div className="place-btn">
+    <button>Place Order</button>
+</div>
+
+
+
+           
+
+
 
 
         </div>
