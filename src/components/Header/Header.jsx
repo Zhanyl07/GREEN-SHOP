@@ -29,12 +29,14 @@ function Header() {
             <Link to={"/cart"}>
             <img src={cart} alt="" />
             </Link>
+            <Link to={"/login"}>
           <div className='login'>
             <button>
               <img src={login} alt="" />
               Login
             </button>
           </div>
+          </Link>
         </div>
       </div>
     </div>

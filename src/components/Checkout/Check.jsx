@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
+import OrderModal from '../../pages/OrderModal'
 import { Link } from 'react-router-dom'
 import productcheck from '../../assets/image/productcheck.png'
 import visa from '../../assets/image/visa.png'
@@ -7,6 +8,14 @@ import mastercard from '../../assets/image/mastercard.png'
 import american from '../../assets/image/american.png'
 import './Check.scss'
 function Check() {
+    const [showModal, setShowModal] = useState(false)
+
+    const handePlaceOrder = () => {
+        setShowModal(true);
+    };
+    const handleCloseModal = () => {
+        setShowModal(false);
+    };
   return (
     <div className='check'>
        <div className="home-check">
@@ -282,6 +291,7 @@ function Check() {
     <span className="checkmark"></span>
     <span>Dorect bank transfer</span>
   </label>
+  
 
   <label className="custom-radio">
     <input
@@ -295,7 +305,7 @@ function Check() {
 </div>
 
 <div className="place-btn">
-    <button>Place Order</button>
+    <button onClick={handePlaceOrder}>Place Order</button>
 </div>
 
 
@@ -307,7 +317,11 @@ function Check() {
 
         </div>
 
+
     </div>
+   
+        {showModal && <OrderModal onClose={handleCloseModal} />}
+
 
     </div>
   )

@@ -5,6 +5,8 @@ import Shopm from './pages/Shopm'
 import Cart from "./pages/Cart";
 import ShopingCartPage from "./pages/ShopingCartPage";
 import ProductCheckout from "./pages/ProductCheckout";
+import OrderModal from "./pages/OrderModal";
+import AuthForm from "./auth/AuthForm";
 export const myRouter = createBrowserRouter ([
     {
         path: "/",
@@ -30,7 +32,18 @@ export const myRouter = createBrowserRouter ([
       {
         path: "/productcheckout",
         element: <ProductCheckout/>
+      },
+      {
+        path: "/ordermodal",
+        element: <OrderModal/>
+
+      },
+      {
+        path: "/login",
+        element: <AuthForm/>
+
       }
+
     ]
 
     }
