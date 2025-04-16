@@ -103,7 +103,7 @@ function Footer() {
             <p>Product Policy</p>
             <p>How to Return</p>
           </div>
-          <div className='categories'>
+          <div className='categories-footer'>
             <h3>Categories</h3>
             <p>House Plants</p>
             <p>Potter Plants</p>

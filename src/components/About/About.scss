@@ -1,0 +1,85 @@
+.about-plants {
+    display: flex;
+    gap: 28px;
+
+    .find1 {
+        width: 586px;
+        height: 250px;
+        background-color: #f4f4f4;
+        display: flex;
+        justify-content: space-between;
+        text-align: end;
+        // border: 1px solid red;
+        padding: 20px;
+        position: relative;
+
+        .images1 {
+
+            .list {
+                position: absolute;
+
+                img {
+                    margin-left: -20px;
+                    margin-top: 114px;
+                }
+            }
+
+            .list2 {
+                position: absolute;
+
+                img {
+                    margin-left: -20px;
+                    margin-top: 122px;
+                }
+            }
+            
+            .banner-img {
+                position: absolute;
+                
+                img {
+                    width: 320px;
+                    height: 350px;
+                    margin-top: -130px;
+                    margin-left: -50px;
+                }
+            }
+        }
+
+        .about-flowers {
+            width: 350px;
+
+            h2 {
+                font-size: 20px;
+                margin-bottom: 10px;
+            }
+
+            p {
+                font-size: 15px;
+                color: gray;
+                margin-bottom: 20px;
+            }
+
+            button {
+                border: none;
+                width: 150px;
+                height: 45px;
+                border-radius: 6px;
+                background-color: #46A358;
+                color: white;
+                font-size: 16px;
+                font-weight: 500;
+            }
+
+            button:hover{
+                color: rgb(70, 163, 88);
+                font-size: 14px;
+                font-weight: 700;
+                background:  rgb(255, 255, 255);
+                border: 1px solid  rgb(70, 163, 88);
+                transition: 0.5s;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+}
