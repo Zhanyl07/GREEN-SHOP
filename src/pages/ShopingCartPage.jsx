@@ -1,12 +1,17 @@
 import React from 'react'
-import ShopingCart from '../components/ShopingCart/Shoping'
+import Shoping from '../components/ShopingCart/Shoping'
+
+
+// const Shopping = () => {}
 function ShopingCartPage() {
+
+
   return (
     <div>
-        <ShopingCart/>
-      
+        <Shoping/>
     </div>
   )
+
 }
 
 export default ShopingCartPage
