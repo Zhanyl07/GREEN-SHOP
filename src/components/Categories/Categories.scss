@@ -1,0 +1,233 @@
+.categories {
+
+    .category {
+        display: flex;
+        gap: 50px;
+    
+        .category-plants {
+            width: 310px;
+            padding: 14px 18px;
+            background-color: #f8f8f8;
+    
+            h2 {
+                font-weight: 600;
+                font-size: 18px;
+            }
+    
+            ul {
+                padding:  20px 24px;
+    
+                li {
+                    margin-bottom: 20px;
+                    font-size: 15px;
+                }
+    
+                li:hover {
+                    color: #46A358;
+                    transition: 0.5s;
+                    font-weight: 600;
+                }
+            }
+    
+            .price-filter {
+    
+                h3 {
+                    font-size: 18px;
+                    font-weight: 600;
+                }
+    
+                .range-values {
+                    
+                    span {
+                        color: #46A358;
+                        font-weight: 600;
+                    }
+                }
+    
+                .slider-wrapper {
+    
+                    input {
+                        cursor: pointer;
+                        width: 200px;
+                        margin-top: 10px;
+                    }
+                }
+    
+                button {
+                    background-color: #46A358;
+                    border: none;
+                    border-radius: 6px;
+                    color: white;
+                    font-weight: 600;
+                    width: 90px;
+                    height: 35px;
+                    font-size: 16px;
+                    margin-top: 20px;
+                    margin-bottom: 25px;
+                }
+    
+                button:hover{
+                    color: rgb(70, 163, 88);
+                    font-size: 14px;
+                    font-weight: 700;
+                    background:  rgb(255, 255, 255);
+                    border: 1px solid  rgb(70, 163, 88);
+                    transition: 0.5s;
+                    font-size: 16px;
+                }
+            }
+    
+            .sale-img {
+                margin-left: -47px;
+            }
+        }
+    
+    
+        .all-plants {
+            
+            .top-plants {
+                display: flex;
+                gap: 340px;
+                margin-bottom: 40px;
+    
+                ul {
+                    display: flex;
+                    gap: 37px;
+    
+                    li:hover {
+                        color: #46A358;
+                        transition: 0.5s;
+                        // border-bottom: 1px solid #46A358;
+                    }
+                }
+    
+                .sort-wrapper {
+    
+                    label {
+                        font-size: 16px;
+                    }
+    
+                    .sort-select {
+                        border: none;
+                        font-size: 15px;
+                    }
+                }
+            }
+    
+            .bottom-plants {
+                
+                .box {
+                    width: 272px;
+                    border: 1px solid #ececec;
+                    background-color: #f8f8f8;
+                    padding: 10px;
+    
+                    h3 {
+                        font-weight: 600;
+                        font-size: 18px;
+                    }
+    
+                    .top-card {
+                        margin-bottom: 10px;
+                        cursor: pointer;
+    
+                        .box-img {
+    
+                            img {
+                                width: 100%;
+                            }
+                        }
+    
+                        .discount {
+                            background-color: #46A358;
+                            color: #f8f8f8;
+                            width: 100px;
+                            text-align: center;
+                            opacity: 1;
+                            transition: 1s;
+                        }
+    
+                        &:hover .discount {
+                            opacity: 0;
+                        }
+    
+                        .add {
+                            display: flex;
+                            justify-content: center;
+                            gap: 23px;
+                            opacity: 0;
+                            transition: 1s;
+    
+                            img {
+                                background-color: #fff;
+                                padding:7px;
+                                border-radius: 4px;
+                            }
+                        }
+    
+                        &:hover .add {
+                            opacity: 1;
+                        }
+                    }
+    
+                    .bottom-card {
+    
+                        .price {
+                            display: flex;
+                            gap: 15px;
+    
+                            b {
+                                color: #46A358;
+                            }
+    
+                            del {
+                                color: gray;
+                            }
+                        }
+                    }
+                }
+    
+                &:hover .box {
+                    opacity: 1;
+                    transition: 1s;
+                    border-top: 1px solid #46A358;
+                }
+            }
+        }
+    }
+
+
+    .pagination {
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: end;
+        padding: 20px;
+      
+        .page {
+          padding: 8px 14px;
+          border: 1px solid #ddd;
+          background-color: white;
+          color: rgb(86, 86, 86);
+          cursor: pointer;
+          border-radius: 6px;
+          font-size: 16px;
+          transition: background-color 0.2s;
+      
+          &:hover {
+            background-color: #f0f0f0;
+          }
+
+          .active {
+            padding: 8px 14px;
+          }
+      
+          &.active {
+            background-color: #46A358;
+            color: white;
+            border: 1px solid #46A358;
+            width: 40px;
+          }
+        }
+    }
+}
