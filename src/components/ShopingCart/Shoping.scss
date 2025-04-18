@@ -1,313 +1,391 @@
-.cart  {
-    width: 1200px;
-    // height: 448px;
-    border: 1px solid red;
- 
-    
 
-    .content {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        // flex-direction: column;
-        align-items: center;
-        gap: 86px;
-        border: 1px solid grey;
-       
+.shopping {
+    margin: 45px auto 0;
+    width: 1200px;
+    height: auto;
+    button{
+      cursor: pointer;
     }
   
-        .number-input {
-            display: flex;
-            align-items: center;
-            border: 1px solid #ccc;
-            width: 80.71px;
-            height: 25px;
-            border-radius: 4px;
-            padding: 5px;
-            justify-content: space-between;
-           
-        }
-        .number {
-            width: 30px;
-            text-align: center;
-            border: none;
-        }
-        .buttons {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-        .buttons button {
-            width: 21.71px;
-            height: 25px;
-            border-radius: 31px;
-            border: none;
-            background: linear-gradient(180.00deg, rgb(70, 163, 88),rgba(70, 163, 88, 0.8) 100%);
-            cursor: pointer;
-            font-size: 20px;
-            font-weight: 400;
-            padding: 0;
-        }
-    
-    
-    
-}
-
-
-// ------------------------------
-
-.cart-total {
-    border: 1px solid #000;
-    padding-right: 20px;
-    width: 335px;
-    height: 370px;
-   
-
-    h3 {
-        margin-bottom: 25px;
-        color: rgb(61, 61, 61);
-        font-family: Cera Pro;
-        font-size: 18px;
-        font-weight: 700;
-        line-height: 16px;
-        letter-spacing: 0%;
-        text-align: left;
-    }
-
-    p {
-        color: rgb(61, 61, 61);
-        font-family: Cera Pro;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 0%;
-        text-align: left;
-    }
-
-
-    .enter {
-        width: 100%;
-        height: 40px;
-
-
-        input {
-            width: 210px;
-            height: 40px;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid green;
-            color: rgb(165, 165, 165);
-            font-family: Cera Pro;
-            font-size: 14px;
-            font-weight: 400;
-            line-height: 15px;
-            letter-spacing: 0%;
-            text-align: left;
-        }
-
-        button {
-            width: 102px;
-            height: 40px;
-            cursor: pointer;
-            
-            border-radius: 0px 3px 3px 0px;
-            background: rgb(70, 163, 88);
-            color: rgb(255, 255, 255);
-            font-family: Cera Pro;
-            font-size: 15px;
-            font-weight: 700;
-            line-height: 16px;
-            letter-spacing: 0%;
-            text-align: center;
-        }
-    }
-      
-      .cart-row {
-        display: flex;
-        justify-content: space-between;
-        margin-top: 30px;
-        margin-bottom: 15px;
-        color: rgb(61, 61, 61);
-        font-family: Cera Pro;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 16px;
-        letter-spacing: 0%;
-        text-align: left;
+    .home-shopping {
+      display: flex;
+      gap: 5px;
+  
+      .shopping-cart {
+        font-weight: 600;
       }
   
-      .cart-row-total{
-
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-        .name {
-            color: rgb(61, 61, 61);
-            font-family: Cera Pro;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 16px;
-            letter-spacing: 0%;
-            text-align: left;
+      a {
+        color: #3d3d3d;
+        transition: 0.5s;
+  
+        &:hover {
+          font-weight: 600;
+          color: rgb(70, 163, 88);
         }
+      }
+    }
+  
+    .all-shopping {
+      .info-shopping {
+        width: 782px;
+        display: flex;
+        margin-top: 51px;
 
-        .price{
-            color: rgb(70, 163, 88);
-            font-family: Cera Pro;
+  
+        p {
+          color: rgb(61, 61, 61);
+          font-size: 16px;
+          font-weight: 500;
+        }
+  
+        .price {
+          margin-left: 245px;
+        }
+  
+        .quantity {
+          margin-left: 108px;
+        }
+  
+        .total {
+          margin-left: 97px;
+        }
+        .text1{
+          margin-left: 197px;
+          
+          p{
+            color: rgb(61, 61, 61);
             font-size: 18px;
             font-weight: 700;
-            line-height: 16px;
-            letter-spacing: 0%;
-            text-align: right;
+            width: 122px;
+
+
+          }
+          
         }
       }
+      .line{
+        width: 782px;
+        border: 0.3px solid rgba(70, 163, 88, 0.5);
+
+      }
+  .rglt{
+    display: flex;
+    gap: 86px;
+      .shopping-left {
+        width: 782px;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin-top: 11px;
   
+        .product-shopping {
+          width: 782px;
+          height: 70px;
+          display: flex;
+          align-items: center;
   
-  .checkout-btn {
-    width: 100%;
-    height: 40px;
-    padding: 12px;
-    border-radius: 3px;
-    background: rgb(70, 163, 88);
-    color: white;
-    border: none;
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    font-family: Cera Pro;
-    font-size: 15px;
+          img {
+            width: 70px;
+            height: 70px;
+          }
+  
+          .shopping-daisy {
+            display: flex;
+            flex-direction: column;
+            margin-left: 14px;
+  
+            .pro-shopping {
+              p {
+                color: rgb(61, 61, 61);
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 16px;
+              }
+            }
+  
+            .sku-shopping {
+              display: flex;
+              gap: 5px;
+  
+              p {
+                color: rgb(165, 165, 165);
+              }
+  
+              span {
+                color: rgb(114, 114, 114);
+              }
+            }
+          }
+  
+          .shop-price {
+            margin-left: 68px;
+  
+            span {
+              color: rgb(114, 114, 114);
+              font-size: 16px;
+              font-weight: 500;
+            }
+          }
+  
+          .quantity-shopping {
+            display: flex;
+            gap: 16px;
+            margin-left: 92px;
+  
+            button {
+              border-radius: 31px;
+              background: linear-gradient(180deg, rgb(70, 163, 88), rgba(70, 163, 88, 0.8) 100%);
+              border: none;
+              width: 21.71px;
+              height: 25px;
+              color: white;
+            }
+          }
+  
+          .shopping-price {
+            margin-left: 82px;
+  
+            span {
+              color: rgb(70, 163, 88);
+              font-size: 16px;
+              font-weight: 700;
+            }
+          }
+        }
+        .shopping-delete{
+            width: 24px;
+            height: 24px;
+            border: 1px dashed  rgb(114, 114, 114);
+            text-align: center;
+            padding-top: 2px;
+            margin-left: 50px;
+            img{
+                width: 16.15px;
+                height: 18.48px;
+            }
+        }
+
+      }
+
+      .shopping-right{
+        width: 332px;
+
+        .line1{
+          width: 328px;
+          border: 0.3px solid rgba(70, 163, 88, 0.5);
+        }
+        .coupon{
+          margin-top: 15px;
+            p{
+                color: rgb(61, 61, 61);
+                font-size: 14px;
+                font-weight: 400;
+            }
+        }
+
+        .right{
+            width: 332px;
+            height: auto;
+            display: flex;
+            
+            input{
+              width: 230px;
+              height: 40px;
+              padding-left: 10px;
+              border: none;
+              box-sizing: border-box;
+              border: 1px solid rgb(70, 163, 88);
+              border-radius: 3px;
+
+
+
+
+            }
+            button{
+              width: 102px;
+              height: 40px;
+              border-radius: 0px 3px 3px 0px;
+              background: rgb(70, 163, 88);
+              border: none;
+              color: rgb(255, 255, 255);
+              font-size: 15px;
+              font-weight: 700;
+            }
+            
+        }
+        .sub-shoping{
+          position: relative;
+          width: 332px;
+          display: flex;
+          gap: 6px;
+          flex-direction: column;
+          margin-top: 20px;
+
+          .sub-text{
+            display: flex;
+            gap: 190px;
+            p{
+              color: rgb(61, 61, 61);
+              font-size: 15px;
+              font-weight: 400;
+            }
+          }
+
+          .sub-text1{
+            display: flex;
+            gap: 125px;
+
+            p{
+              color: rgb(61, 61, 61);
+              font-size: 15px;
+              font-weight: 400;
+              width: 181px;
+            }
+            .two{
+              width: 90px;
+              color: rgb(61, 61, 61);
+              font-size: 15px;
+              font-weight: 400;
+            }
+
+          }
+
+          .sub-text2{
+            display: flex;
+            gap: 216px;
+
+            p{
+              color: rgb(61, 61, 61);
+              font-size: 15px;
+              font-weight: 400;
+            }
+            .two{
+              color: rgb(61, 61, 61);
+              font-size: 18px;
+              font-weight: 500;
+            }
+          }
+
+          
+
+          .link{
+            font-size: 12px;
+            font-weight: 400;
+            position: absolute;
+            bottom: -15px;
+            right: 0;
+            
+
+            a{
+            color: rgb(70, 163, 88);
+
+            }
+          }
+
+        
+
+          
+        }
+
+        .sub-text3{
+          display: flex;
+          gap: 198px;
+          margin-top: 26px;
+
+          p{
+            color: rgb(61, 61, 61);
+          font-size: 16px;
+          font-weight: 700;
+
+          }
+          .two{
+            color: rgb(70, 163, 88);
+            font-size: 18px;
+            font-weight: 700;
+          }
+        }
+
+        .proseed{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          text-align: center;
+          margin-top: 26px;
+
+          button{
+            width: 332px;
+            height: 40px;
+            border-radius: 3px;
+            background: rgb(70, 163, 88);
+            border: none;
+            color: rgb(255, 255, 255);
+            font-size: 15px;
+            font-weight: 700;
+          }
+          a{
+            color: rgb(70, 163, 88);
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+      }
+      
+    }
+}
+
+.releted1 {
+  width: 1200px;
+  height: 449px;
+  margin: 0 auto;
+  margin-top: 127px;
+
+  .line1 {
+    border: 0.3px solid rgba(70, 163, 88, 0.5);
+    margin-top: 11px;
+  }
+
+  h3 {
+    color: rgb(70, 163, 88);
+    font-size: 17px;
     font-weight: 700;
     line-height: 16px;
-    letter-spacing: 0%;
-    text-align: center;
-  }
-  
-  .checkout-btn:hover {
-    background-color: rgba(0, 128, 0, 0.253);
   }
 
-   .continue {
-    width: 135px;
-    height: 16px;
-    padding-left: 90px;
-    color: rgb(70, 163, 88);
-    font-family: Cera Pro;
-    font-size: 15px;
-    font-weight: 400;
-    line-height: 16px;
-    letter-spacing: 0%;
-    text-align: center;
-  }
-}
-//----------------------
-
-
-.link {
-  display: flex;
-  gap: 10px;
-  font-size: 20px;
- 
-
-  .home {
-    color: #8b8989;
-  }
-
-  a {
-    text-decoration: none;
-    color: black;
-  }
-
-  a:hover {
-    color: rgb(69, 108, 179);
-  }
-}
-
-
-        .box-name {  
-            ul {
-                display: flex;
-                justify-content: space-between;
-                width: 960px;
-                height: 70px;
-                align-items: center;
-                margin-right: 240px;
-                box-shadow: 0 0 15px 0 rgb(227, 224, 224);
-                margin-top: 51px;
-            
-                .li {
-                    color: rgb(61, 61, 61);
-                    font-family: Cera Pro;
-                    font-size: 16px;
-                    font-weight: 500;
-                    line-height: 16px;
-                    letter-spacing: 0%;
-                    text-align: left;
-                }
-              }
-        
-    }
-
-.cart-in {
-    
-    .box {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        align-items: center;
-        gap: 22px;
-        width: 782px;
-        height: 70;
-    
-        
-
-
-  .bottom-card {
+  .oll1 {
     display: flex;
-    width: 782px;
-    height: 70px;
-    align-items: center;
-    justify-content: center;
-    font-size: 18px;
-    background-color: rgb(251, 251, 251);
+    width: 1200px;
+    overflow-y: scroll;
+    gap: 30px;
+    margin-top: 61px;
 
-    .game-img {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-right: 170px;
-      margin-top: 20px;
+    .rel-product1 {
+      img {
+        width: 190px;
+        height: 243px;
+        object-fit: cover;
+      }
 
-      .img {
-        width: 70px;
-        height: 70px;
-        object-fit: contain;
+      width: 219px;
+      padding: 5px 11px 7px 18px;
+
+      .rel-text1 {
+        margin-left: -18px;
+
+        p {
+          color: rgb(61, 61, 61);
+          font-size: 15px;
+        }
+
+        span {
+          color: rgb(70, 163, 88);
+          font-size: 16px;
+          font-weight: 600;
+        }
       }
     }
-
-    .game-texts {
-      display: flex;
-      gap: 82px;
-      margin-top: 20px;
-    }
-
-    .icon {
-        width: 24px;
-        height: 24px;
-
-        // .img {
-        //     width: 16.15px;
-        //     height: 18.48px;
-        //     left: 4.21px;
-        //     right: 3.63px;
-        //     top: 2.71px;
-        //     bottom: 2.8px;
-        //     border: 1px dotted gray;
-        // }
-    }
-
   }
-    }
-
-
 }
+  }
+  

@@ -1,180 +1,231 @@
-import React, { useState } from 'react';
-import './Shoping.scss';
-import { useSelector } from 'react-redux';
+import React, {useState} from 'react';
 import { Link } from 'react-router-dom';
-import Barberton from "../../assets/image/Barberton.png"
-import icon from "../../assets/svg/icon.svg"
+import './Shoping.scss'; 
+import productcheck from '../../assets/image/productcheck.png';
+import green from '../../assets/image/g.png'
 
-function Shoping ()  {
-
-
-  const { list } = useSelector((state) => state.carts)
-
-  const [quantity, setQuantity] = useState(2); 
-
-  function increase() {
-    setQuantity((prev) => Math.min(prev + 1, 99));
-  }
-
-  function decrease() {
-    setQuantity((prev) => Math.max(prev - 1, 0)); 
-  }
-
+import deleteimg from '../../assets/svg/delete.svg';
+function Shopping() {
   return (
-    <div className='cart container'>
+    <div className='shopping'>
+      <div className="home-shopping">
+        <Link className='shopping-home' to="/">Home</Link>
+        /
+        <Link className='shopping-shop' to="/shop">Shop</Link>
+        /
+        <Link className='shopping-cart' to="/shop">Shopping Cart</Link>
+      </div>
 
-        <div className='link'>
-          <Link className='home' to="/">Home</Link>
-          <div>/</div>
-          <Link to="/shop">Shop</Link>
-          <div>/</div>
-           <Link to="/shopping">Shopping Cart</Link>
+      <div className="all-shopping">
+        <div className="info-shopping">
+          <p>Products</p>
+          <p className='price'>Price</p>
+          <p className='quantity'>Quantity</p>
+          <p className='total'>Total</p>
+
+          <div className="text1">
+            <p> Cart Totals</p>
+          </div>
         </div>
 
-              <div className='box-name'>
-                <ul>
-                  <li>Products</li>
-                  <li>Price</li>
-                  <li>Quantity</li>
-                  <li>Total</li>
-                  <li>Cart Totals</li>
-                </ul>
+        
+
+        <div className="line"></div>
+<div className="rglt">
+        <div className="shopping-left">
+          <div className="product-shopping">
+            <img src={productcheck} alt="Product" />
+
+            <div className="shopping-daisy">
+              <div className="pro-shopping">
+                <p>Barberton Daisy</p>
               </div>
-      <div className='content'> 
-          <div className='cart-in'>
-            <div className='box'>
-
-              <div className='bottom-card'>
-
-                <div className='game-img'>
-                  <img src={Barberton} alt="" />
-                  <div className='barberton'>
-                  <h5>Barberton Daisy</h5>
-                  <p>SKU: 1995751877966</p>
-                  </div>
-                </div>
-                <div className='game-texts'>
-                  <p>$550</p>
-                  <div className="number-input">
-                    <div className="buttons">
-                      <button onClick={decrease}>-</button>
-                        <input 
-                            type="text" 
-                            className="number" 
-                            value={quantity.toString().padStart(2, '0')} 
-                            readOnly
-                        />
-                        <button onClick={increase}>+</button>
-                    </div>
-                  </div>
-                  <p>$1100</p>
-                  <div className='icon'>
-                  <img src={icon} alt="" />
-                  </div>
-                </div>
+              <div className="sku-shopping">
+                <p>SKU:</p>
+                <span>1995751877966</span>
               </div>
-
-              {/* <div className='bottom-card'>
-
-              <div className='game-img'>
-                <img src={Barberton} alt="" />
-                <div className='barberton'>
-                <h5>Barberton Daisy</h5>
-                <p>SKU: 1995751877966</p>
-                </div>
-              </div>
-              <div className='game-texts'>
-                <p>$550</p>
-                <div className="number-input">
-                  <div className="buttons">
-                    <button onClick={decrease}>-</button>
-                      <input 
-                          type="text" 
-                          className="number" 
-                          value={quantity.toString().padStart(2, '0')} 
-                          readOnly
-                      />
-                      <button onClick={increase}>+</button>
-                  </div>
-                </div>
-                <p>$1100</p>
-              </div>
-              <div className='icon'>
-              <img src={icon} alt="" />
-              </div>
-              </div>
-
-              <div className='bottom-card'>
-
-                <div className='game-img'>
-                  <img src={Barberton} alt="" />
-                  <div className='barberton'>
-                  <h5>Barberton Daisy</h5>
-                  <p>SKU: 1995751877966</p>
-                  </div>
-                </div>
-                <div className='game-texts'>
-                  <p>$550</p>
-                  <div className="number-input">
-                    <div className="buttons">
-                      <button onClick={decrease}>-</button>
-                        <input 
-                            type="text" 
-                            className="number" 
-                            value={quantity.toString().padStart(2, '0')} 
-                            readOnly
-                        />
-                        <button onClick={increase}>+</button>
-                    </div>
-                  </div>
-                  <p>$1100</p>
-                </div>
-                <div className='icon'>
-                <img src={icon} alt="" />
-                </div>
-              </div> */}
-
             </div>
-          </div>
-          <div className='shop'>     
-              <div className="cart-total">
-                {/* <h3>Cart Totals</h3> */}
-                <p>Coupon Apply</p>
-                <div className='enter'>
-                  <input type="text" placeholder='Enter coupon code here...'/>
-                  <button className="checkout-btn">Apply</button>
-                </div>
-             
-                <div className="cart-row">
-                  <span>Subtotal</span>
-                  <span>$2,683.00</span>
-                </div>
 
-                <div className='cart-row'>
-                  <span>Coupon Discount</span>
-                  <span>(-) 00.00</span>
-                </div>
+            <div className="shop-price">
+              <span>$119.00</span>
+            </div>
 
-                <div className="cart-row">
-                  <span>Shiping</span>
-                  <span>$16.00</span>
-                  <span>View shipping charge</span>
-                </div>
-              
-                <div className="cart-row-total">
-                  <span className='name'>Total</span>
-                  <span className='price'>$2,699.00</span>
-                </div>
-                <button className="checkout-btn">Proceed To Checkout</button>
-                <span className='continue'>Continue Shopping</span>
-              </div>
+            <div className="quantity-shopping">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+
+            <div className="shopping-price">
+              <span>$119.00</span>
+            </div>
+
+            <div className="shopping-delete">
+          <img src={deleteimg} alt="" />
+        </div>
+
         
 
           </div>
+
+
+          <div className="product-shopping">
+            <img src={productcheck} alt="Product" />
+
+            <div className="shopping-daisy">
+              <div className="pro-shopping">
+                <p>Barberton Daisy</p>
+              </div>
+              <div className="sku-shopping">
+                <p>SKU:</p>
+                <span>1995751877966</span>
+              </div>
+            </div>
+
+            <div className="shop-price">
+              <span>$119.00</span>
+            </div>
+
+            <div className="quantity-shopping">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+
+            <div className="shopping-price">
+              <span>$119.00</span>
+            </div>
+
+            <div className="shopping-delete">
+          <img src={deleteimg} alt="" />
+        </div>
+
+          </div>
+
+
+          <div className="product-shopping">
+            <img src={productcheck} alt="Product" />
+
+            <div className="shopping-daisy">
+              <div className="pro-shopping">
+                <p>Barberton Daisy</p>
+              </div>
+              <div className="sku-shopping">
+                <p>SKU:</p>
+                <span>1995751877966</span>
+              </div>
+            </div>
+
+            <div className="shop-price">
+              <span>$119.00</span>
+            </div>
+
+            <div className="quantity-shopping">
+              <button>-</button>
+              <p>0</p>
+              <button>+</button>
+            </div>
+
+            <div className="shopping-price">
+              <span>$119.00</span>
+            </div>
+
+            <div className="shopping-delete">
+          <img src={deleteimg} alt="" />
+        </div>
+
+        
+        
+
+
+          </div>
+          
+        </div>
+        
+
+
+        <div className="shopping-right">
+        
+        <div className="line1"></div>
+
+          
+        <div className="coupon">
+          <p>Coupon Apply</p>
+        </div>
+          <div className="right">
+            <input type="text" placeholder='Enter coupon code here...'/>
+            <button>Apply</button>
+
+          </div>
+
+          <div className="sub-shoping">
+
+            <div className="sub-text">
+              <p>Subtotal</p>
+              <span className='two'>$2,683.00</span>
+            </div>
+
+            
+            <div className="sub-text1">
+              <p>Coupon Discount</p>
+              <span className='two'>(-) 00.00</span>
+            </div>
+
+            
+            <div className="sub-text2">
+              <p>Shiping</p>
+              <span className='two'>$16.00</span>
+            </div>
+
+            <div className="link">
+              <Link>
+              <p>View shipping charge</p>
+              </Link>
+            </div>
+          </div>
+
+          <div className="sub-text3">
+              <p>Total</p>
+              <span className='two'>$2,699.00</span>
+            </div>
+
+          <div className="proseed">
+            <Link to={"/productcheckout"}>
+            <button>Proceed To Checkout</button>
+            </Link>
+            <Link>
+            <p>Continue Shopping</p>
+            </Link>
+          </div>
+
+
+
+       
+        </div>
+        </div>
+
       </div>
+
+
+      
+          <div className="releted1">
+              <h3>Releted Products</h3>
+              <div className="line1"></div>
+      
+              <div className="oll1">
+                  {[...Array(8)].map((_, i) => (
+                      <div className="rel-product1" key={i}>
+                          <img src={green} alt="" />
+                          <div className="rel-text1">
+                              <p>Beach Spider Lily</p>
+                              <span>$129.00</span>
+                          </div>
+                      </div>
+                  ))}
+              </div>
+          </div>
     </div>
   );
 }
 
-
-export default Shoping
+export default Shopping;

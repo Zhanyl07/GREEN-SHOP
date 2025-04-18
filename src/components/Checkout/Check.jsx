@@ -19,9 +19,9 @@ function Check() {
   return (
     <div className='check'>
        <div className="home-check">
-        <Link className='check-home' to={"/productcheckout"}>Home </Link>
+        <Link className='check-home' to={"/"}>Home </Link>
         /
-        <Link className='checkshop' to={"/shop"}> Shop </Link>
+        <Link className='checkshop1' to={"/shop"}> Shop </Link>
         /
         <Link className='checkshop' to={"/productcheckout"}> Checkout</Link>
     </div>
