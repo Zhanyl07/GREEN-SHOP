@@ -1,0 +1,40 @@
+import React from 'react'
+import person from '../../assets/svg/person.svg'
+import './Account.scss'
+function Account() {
+  return (
+    <div className='account'>
+        <div className="left-acc">
+            <h2>My Account</h2>
+            <div className="img-text">
+  <svg
+    className="icon"
+    width="12"
+    height="15"
+    viewBox="0 0 12 15"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M6 0C3.96 0 2.32 1.63 2.32 3.65C2.32 5.67 3.96 7.3 6 7.3C8.03 7.3 9.67 5.67 9.67 3.65C9.67 1.63 8.03 0 6 0ZM3.48 3.65C3.48 2.27 4.61 1.15 6 1.15C7.38 1.15 8.51 2.27 8.51 3.65C8.51 5.03 7.38 6.15 6 6.15C4.61 6.15 3.48 5.03 3.48 3.65ZM4.09 8.84C1.83 8.84 0 10.66 0 12.91C0 13.33 0.15 13.87 0.67 14.15C1.36 14.52 2.85 15 6 15C9.14 15 10.63 14.52 11.32 14.15C11.84 13.87 12 13.33 12 12.91C12 10.66 10.16 8.84 7.9 8.84L4.09 8.84ZM1.16 12.91C1.16 11.3 2.47 10 4.09 10L7.9 10C9.52 10 10.83 11.3 10.83 12.91C10.83 13 10.82 13.06 10.8 13.09C10.79 13.12 10.78 13.13 10.77 13.14C10.32 13.38 9.05 13.84 6 13.84C2.94 13.84 1.67 13.38 1.22 13.14C1.21 13.13 1.2 13.12 1.19 13.09C1.17 13.06 1.16 13 1.16 12.91Z"
+      fill="currentColor"
+    />
+  </svg>
+  <p>Account Details</p>
+</div>
+
+
+
+
+        </div>
+        <div className="right-acc"></div>
+    </div>
+  )
+}
+
+export default Account
+
+
+
+
+

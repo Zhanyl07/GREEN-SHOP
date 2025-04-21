@@ -11,6 +11,8 @@ import Banner from "./components/Banner/Banner";
 import Categories from "./components/Categories/Categories";
 import About from "./components/About/About";
 import Post from "./components/Post/Post";
+import Profile from "./components/Profile/Index";
+import Account from "./pages/Account1";
 
 export const myRouter = createBrowserRouter([
   {
@@ -27,10 +29,24 @@ export const myRouter = createBrowserRouter([
       { path: "/banner", element: <Banner /> },
       { path: "/about", element: <About /> },
       { path: "/post", element: <Post /> },
+      {
+        path: "/login",
+        element: <AuthForm />
+      },
+      {
+        path: "/register",
+        element: <Profile />
+      },
+      {
+        path: "/account",
+        element: <Account />
+      },
+
+
     ]
   },
-  {
-    path: "/login",
-    element: <AuthForm />
-  }
+  // {
+  //   path: "/login",
+  //   element: <AuthForm />
+  // }
 ]);

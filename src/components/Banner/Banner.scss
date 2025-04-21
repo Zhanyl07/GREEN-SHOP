@@ -1,0 +1,24 @@
+// Banner.scss
+@import "~bootstrap/scss/bootstrap"; // подключишь только в этом компоненте
+
+
+.banner-carousel {
+    width: 100%;
+    overflow: hidden;
+  
+    .main-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      display: block;
+    }
+  
+    .carousel-caption {
+      bottom: 20%;
+      h3, p {
+        text-decoration: none;
+        color: white;
+      }
+    }
+  }
+  

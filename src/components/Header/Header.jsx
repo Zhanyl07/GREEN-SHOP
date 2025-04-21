@@ -5,8 +5,20 @@ import logo from "../../assets/svg/logo.svg"
 import search from "../../assets/svg/search.svg"
 import cart from "../../assets/svg/cart.svg"
 import login from "../../assets/svg/login.svg"
+import { auth } from "../../firebase";
+import {  useNavigate } from "react-router-dom";
+
 
 function Header() {
+    const navigate = useNavigate();
+  
+    const handlePersonClick = () => {
+      if (auth.currentUser) {
+        navigate("/profile");
+      } else {
+        navigate("/register");
+      }
+    };
   return (
     <div>
       <div className='header container'>
@@ -18,7 +30,7 @@ function Header() {
         <div className='lists'>
           <Link className='home' to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/plantcare">Plant Care</Link>
+          <Link to="/account">Plant Care</Link>
           <Link to="/blogs">Blogs</Link>
         </div>
 
@@ -31,12 +43,14 @@ function Header() {
             </Link>
             <Link to={"/login"}>
           <div className='login'>
-            <button>
+            <button onClick={handlePersonClick}>
               <img src={login} alt="" />
               Login
             </button>
           </div>
           </Link>
+
+          
         </div>
       </div>
     </div>
