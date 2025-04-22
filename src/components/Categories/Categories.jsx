@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import "../Categories/Categories.scss";
-
 import sale from "../../assets/svg/sale.svg"
 import cart from "../../assets/svg/cart.svg"
 import wishlist from "../../assets/svg/wishlist.svg"
