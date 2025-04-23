@@ -1,12 +1,14 @@
 import React from 'react'
 import "../Header/Header.scss"
 import { Link } from 'react-router-dom'
+import { auth } from "../../firebase";
+import { useNavigate } from "react-router-dom";
+
 import logo from "../../assets/svg/logo.svg"
 import search from "../../assets/svg/search.svg"
 import cart from "../../assets/svg/cart.svg"
 import login from "../../assets/svg/login.svg"
-import { auth } from "../../firebase";
-import {  useNavigate } from "react-router-dom";
+import wishlist from "../../assets/svg/wishlist.svg"
 
 
 function Header() {
@@ -35,22 +37,24 @@ function Header() {
         </div>
 
         <div className='search'>
-          <Link to={"/search"}>
+          <Link to="/search">
             <img src={search} alt="" />
-            </Link>
-            <Link to={"/cart"}>
+          </Link>
+          <Link className='wishlist' to="/wishlist">
+            <img src={wishlist} alt="" />
+          </Link>
+          <Link to="/cart">
             <img src={cart} alt="" />
-            </Link>
-            <Link to={"/login"}>
-          <div className='login'>
-            <button onClick={handlePersonClick}>
-              <img src={login} alt="" />
-              Login
-            </button>
-          </div>
+          </Link>
+          <Link to={"/login"}>
+            <div className='login'>
+              <button onClick={handlePersonClick}>
+                <img src={login} alt="" />
+                Login
+              </button>
+            </div>
           </Link>
 
-          
         </div>
       </div>
     </div>
