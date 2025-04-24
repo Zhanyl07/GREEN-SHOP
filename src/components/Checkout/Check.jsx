@@ -147,10 +147,17 @@ function Check() {
 
 </div>
 
-<div className="radio">
-    <input type="radio" />
-    <p>Ship to a different address?</p>
-</div>
+
+
+
+<label className="custom-radio">
+    <input
+      type="radio"
+     
+    />
+    <span className="checkmark"></span>
+    <span>Ship to a different address?</span>
+  </label>
 
 <div className="order">
     <p>Order notes (optional)</p>

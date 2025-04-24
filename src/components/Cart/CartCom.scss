@@ -1,6 +1,11 @@
+
 .cart{
+    
     font-family: "Poppins", sans-serif;
     margin-top: 47px;
+    a{
+        text-decoration: none;
+    }
     button{
         cursor: pointer;
     }
@@ -16,6 +21,7 @@
         }
         a{
             color: #3D3D3D;
+            text-decoration: none;
             }
             a:hover{
                 color: rgb(70, 163, 88);

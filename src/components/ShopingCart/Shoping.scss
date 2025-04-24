@@ -1,338 +1,341 @@
-
 .shopping {
-    margin: 45px auto 0;
-    width: 1200px;
-    height: auto;
-    button{
-      cursor: pointer;
+  margin: 45px auto 0;
+  width: 1200px;
+  height: auto;
+  
+  a {
+    text-decoration: none;
+  }
+
+  button {
+    cursor: pointer;
+  }
+
+  .home-shopping {
+    display: flex;
+    gap: 5px;
+
+    .shopping-cart {
+      font-weight: 600;
     }
-  
-    .home-shopping {
-      display: flex;
-      gap: 5px;
-  
-      .shopping-cart {
+
+    a {
+      color: #3d3d3d;
+      transition: 0.5s;
+
+      &:hover {
         font-weight: 600;
+        color: rgb(70, 163, 88);
       }
-  
-      a {
-        color: #3d3d3d;
-        transition: 0.5s;
-  
-        &:hover {
-          font-weight: 600;
-          color: rgb(70, 163, 88);
+    }
+  }
+
+  .all-shopping {
+    .info-shopping {
+      width: 782px;
+      display: flex;
+      margin-top: 51px;
+
+      p {
+        color: rgb(61, 61, 61);
+        font-size: 16px;
+        font-weight: 500;
+      }
+
+      .price {
+        margin-left: 245px;
+      }
+
+      .quantity {
+        margin-left: 108px;
+      }
+
+      .total {
+        margin-left: 97px;
+      }
+      
+      .text1 {
+        margin-left: 197px;
+
+        p {
+          color: rgb(61, 61, 61);
+          font-size: 18px;
+          font-weight: 700;
+          width: 122px;
         }
       }
     }
-  
-    .all-shopping {
-      .info-shopping {
-        width: 782px;
-        display: flex;
-        margin-top: 51px;
 
-  
+    .line {
+      width: 782px;
+      border: 0.3px solid rgba(70, 163, 88, 0.5);
+    }
+  }
+
+  .rglt {
+    display: flex;
+    gap: 86px;
+
+    .shopping-left {
+      width: 782px;
+      height: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 11px;
+      margin-top: 11px;
+
+      .product-shopping {
+        width: 782px;
+        height: 70px;
+        display: flex;
+        align-items: center;
+
+        img {
+          width: 70px;
+          height: 70px;
+        }
+
+        .shopping-daisy {
+          display: flex;
+          flex-direction: column;
+          margin-left: 14px;
+
+          .pro-shopping {
+            p {
+              color: rgb(61, 61, 61);
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 16px;
+            }
+          }
+
+          .sku-shopping {
+            display: flex;
+            gap: 5px;
+
+            p {
+              color: rgb(165, 165, 165);
+            }
+
+            span {
+              color: rgb(114, 114, 114);
+            }
+          }
+        }
+
+        .shop-price {
+          margin-left: 98px;
+
+          span {
+            color: rgb(114, 114, 114);
+            font-size: 16px;
+            font-weight: 500;
+          }
+        }
+
+        .quantity-shopping {
+          display: flex;
+          gap: 16px;
+          margin-left: 92px;
+
+          button {
+            border-radius: 31px;
+            background: linear-gradient(180deg, rgb(70, 163, 88), rgba(70, 163, 88, 0.8) 100%);
+            border: none;
+            width: 21.71px;
+            height: 25px;
+            color: white;
+          }
+        }
+
+        .shopping-price {
+          margin-left: 82px;
+
+          span {
+            color: rgb(70, 163, 88);
+            font-size: 16px;
+            font-weight: 700;
+          }
+        }
+      }
+
+      .shopping-delete {
+        width: 24px;
+        height: 24px;
+        border: 1px dashed rgb(114, 114, 114);
+        text-align: center;
+        margin-left: 50px;
+        position: relative;
+
+        img {
+          position: absolute;
+          top: 2px;
+          right: 3px;
+          width: 16.15px;
+          height: 18.48px;
+        }
+
+        &:hover {
+          cursor: pointer;
+          background-color: rgba(70, 163, 88, 0.1);
+        }
+      }
+    }
+
+    .shopping-right {
+      width: 332px;
+
+      .line1 {
+        width: 328px;
+        border: 0.3px solid rgba(70, 163, 88, 0.5);
+      }
+
+      .coupon {
+        margin-top: 15px;
+        p {
+          color: rgb(61, 61, 61);
+          font-size: 14px;
+          font-weight: 400;
+        }
+      }
+
+      .right {
+        width: 332px;
+        display: flex;
+
+        input {
+          width: 230px;
+          height: 40px;
+          padding-left: 10px;
+          border: none;
+          box-sizing: border-box;
+          border: 1px solid rgb(70, 163, 88);
+          border-radius: 3px;
+        }
+
+        button {
+          width: 102px;
+          height: 40px;
+          border-radius: 0px 3px 3px 0px;
+          background: rgb(70, 163, 88);
+          border: none;
+          color: rgb(255, 255, 255);
+          font-size: 15px;
+          font-weight: 700;
+        }
+      }
+
+      .sub-shoping {
+        position: relative;
+        width: 332px;
+        display: flex;
+        gap: 6px;
+        flex-direction: column;
+        margin-top: 20px;
+
+        .sub-text {
+          display: flex;
+          gap: 190px;
+          p {
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+
+        .sub-text1 {
+          display: flex;
+          gap: 125px;
+
+          p {
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 400;
+            width: 181px;
+          }
+
+          .two {
+            width: 90px;
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 400;
+          }
+        }
+
+        .sub-text2 {
+          display: flex;
+          gap: 216px;
+
+          p {
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 400;
+          }
+
+          .two {
+            color: rgb(61, 61, 61);
+            font-size: 18px;
+            font-weight: 500;
+          }
+        }
+
+        .link {
+          font-size: 12px;
+          font-weight: 400;
+          position: absolute;
+          bottom: -24px;
+          right: 0;
+
+          a {
+            color: rgb(70, 163, 88);
+          }
+        }
+      }
+
+      .sub-text3 {
+        display: flex;
+        gap: 198px;
+        margin-top: 26px;
+
         p {
           color: rgb(61, 61, 61);
           font-size: 16px;
-          font-weight: 500;
+          font-weight: 700;
         }
-  
-        .price {
-          margin-left: 245px;
-        }
-  
-        .quantity {
-          margin-left: 108px;
-        }
-  
-        .total {
-          margin-left: 97px;
-        }
-        .text1{
-          margin-left: 197px;
-          
-          p{
-            color: rgb(61, 61, 61);
-            font-size: 18px;
-            font-weight: 700;
-            width: 122px;
 
-
-          }
-          
+        .two {
+          color: rgb(70, 163, 88);
+          font-size: 18px;
+          font-weight: 700;
         }
       }
-      .line{
-        width: 782px;
-        border: 0.3px solid rgba(70, 163, 88, 0.5);
 
-      }
-  .rglt{
-    display: flex;
-    gap: 86px;
-      .shopping-left {
-        width: 782px;
-        height: auto;
+      .proseed {
         display: flex;
         flex-direction: column;
-        gap: 11px;
-        margin-top: 11px;
-  
-        .product-shopping {
-          width: 782px;
-          height: 70px;
-          display: flex;
-          align-items: center;
-  
-          img {
-            width: 70px;
-            height: 70px;
-          }
-  
-          .shopping-daisy {
-            display: flex;
-            flex-direction: column;
-            margin-left: 14px;
-  
-            .pro-shopping {
-              p {
-                color: rgb(61, 61, 61);
-                font-size: 16px;
-                font-weight: 500;
-                line-height: 16px;
-              }
-            }
-  
-            .sku-shopping {
-              display: flex;
-              gap: 5px;
-  
-              p {
-                color: rgb(165, 165, 165);
-              }
-  
-              span {
-                color: rgb(114, 114, 114);
-              }
-            }
-          }
-  
-          .shop-price {
-            margin-left: 68px;
-  
-            span {
-              color: rgb(114, 114, 114);
-              font-size: 16px;
-              font-weight: 500;
-            }
-          }
-  
-          .quantity-shopping {
-            display: flex;
-            gap: 16px;
-            margin-left: 92px;
-  
-            button {
-              border-radius: 31px;
-              background: linear-gradient(180deg, rgb(70, 163, 88), rgba(70, 163, 88, 0.8) 100%);
-              border: none;
-              width: 21.71px;
-              height: 25px;
-              color: white;
-            }
-          }
-  
-          .shopping-price {
-            margin-left: 82px;
-  
-            span {
-              color: rgb(70, 163, 88);
-              font-size: 16px;
-              font-weight: 700;
-            }
-          }
-        }
-        .shopping-delete{
-            width: 24px;
-            height: 24px;
-            border: 1px dashed  rgb(114, 114, 114);
-            text-align: center;
-            padding-top: 2px;
-            margin-left: 50px;
-            img{
-                width: 16.15px;
-                height: 18.48px;
-            }
-        }
+        gap: 5px;
+        text-align: center;
+        margin-top: 26px;
 
-      }
-
-      .shopping-right{
-        width: 332px;
-
-        .line1{
-          width: 328px;
-          border: 0.3px solid rgba(70, 163, 88, 0.5);
-        }
-        .coupon{
-          margin-top: 15px;
-            p{
-                color: rgb(61, 61, 61);
-                font-size: 14px;
-                font-weight: 400;
-            }
-        }
-
-        .right{
-            width: 332px;
-            height: auto;
-            display: flex;
-            
-            input{
-              width: 230px;
-              height: 40px;
-              padding-left: 10px;
-              border: none;
-              box-sizing: border-box;
-              border: 1px solid rgb(70, 163, 88);
-              border-radius: 3px;
-
-
-
-
-            }
-            button{
-              width: 102px;
-              height: 40px;
-              border-radius: 0px 3px 3px 0px;
-              background: rgb(70, 163, 88);
-              border: none;
-              color: rgb(255, 255, 255);
-              font-size: 15px;
-              font-weight: 700;
-            }
-            
-        }
-        .sub-shoping{
-          position: relative;
+        button {
           width: 332px;
-          display: flex;
-          gap: 6px;
-          flex-direction: column;
-          margin-top: 20px;
-
-          .sub-text{
-            display: flex;
-            gap: 190px;
-            p{
-              color: rgb(61, 61, 61);
-              font-size: 15px;
-              font-weight: 400;
-            }
-          }
-
-          .sub-text1{
-            display: flex;
-            gap: 125px;
-
-            p{
-              color: rgb(61, 61, 61);
-              font-size: 15px;
-              font-weight: 400;
-              width: 181px;
-            }
-            .two{
-              width: 90px;
-              color: rgb(61, 61, 61);
-              font-size: 15px;
-              font-weight: 400;
-            }
-
-          }
-
-          .sub-text2{
-            display: flex;
-            gap: 216px;
-
-            p{
-              color: rgb(61, 61, 61);
-              font-size: 15px;
-              font-weight: 400;
-            }
-            .two{
-              color: rgb(61, 61, 61);
-              font-size: 18px;
-              font-weight: 500;
-            }
-          }
-
-          
-
-          .link{
-            font-size: 12px;
-            font-weight: 400;
-            position: absolute;
-            bottom: -15px;
-            right: 0;
-            
-
-            a{
-            color: rgb(70, 163, 88);
-
-            }
-          }
-
-        
-
-          
-        }
-
-        .sub-text3{
-          display: flex;
-          gap: 198px;
-          margin-top: 26px;
-
-          p{
-            color: rgb(61, 61, 61);
-          font-size: 16px;
+          height: 40px;
+          border-radius: 3px;
+          background: rgb(70, 163, 88);
+          border: none;
+          color: rgb(255, 255, 255);
+          font-size: 15px;
           font-weight: 700;
-
-          }
-          .two{
-            color: rgb(70, 163, 88);
-            font-size: 18px;
-            font-weight: 700;
-          }
         }
 
-        .proseed{
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-          text-align: center;
-          margin-top: 26px;
-
-          button{
-            width: 332px;
-            height: 40px;
-            border-radius: 3px;
-            background: rgb(70, 163, 88);
-            border: none;
-            color: rgb(255, 255, 255);
-            font-size: 15px;
-            font-weight: 700;
-          }
-          a{
-            color: rgb(70, 163, 88);
-            font-size: 15px;
-            font-weight: 400;
-          }
+        a {
+          color: rgb(70, 163, 88);
+          font-size: 15px;
+          font-weight: 400;
         }
       }
-      
     }
+  }
 }
 
 .releted1 {
@@ -387,5 +390,4 @@
     }
   }
 }
-  }
-  
+

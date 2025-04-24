@@ -1,4 +1,7 @@
 .shop {
+  a{
+    text-decoration: none;
+  }
     font-family: "Poppins", sans-serif;
     margin-top: 47px;
   
@@ -40,7 +43,7 @@
   
         .shop-search {
           position: absolute;
-          right: 0;
+          right: 16px;
           width: 35px;
           height: 30px;
           top: 23px;
@@ -100,6 +103,11 @@
             .stars {
               display: flex;
               gap: 5px;
+
+              img{
+                width: 12.5px;
+                height: 11.88px;
+              }
             }
   
             p {
@@ -252,7 +260,6 @@
               height: 40px;
               border: 1px solid rgb(70, 163, 88);
               border-radius: 6px;
-              padding: 12px 10px 10px 9px;
               margin-left: -12px;
   
               img {
@@ -291,6 +298,18 @@
           margin-top: 13px;
           display: flex;
           gap: 16px;
+
+          p{
+            color: rgb(61, 61, 61);
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 8px;
+          }
+
+          img{
+            width: 15px;
+            height: 12.19px;
+          }
         }
       }
     }
@@ -299,7 +318,7 @@
       width: 1200px;
       height: 500px;
       margin: 0 auto;
-      margin-top: 92px;
+      margin-top: 292px;
   
       .des-link {
         display: flex;

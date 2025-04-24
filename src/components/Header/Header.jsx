@@ -51,7 +51,7 @@ function Header() {
               )}
             </div>
           </Link>
-          <Link to="/cart">
+          <Link to="/shopingcart">
             <img src={cart} alt="cart" />
           </Link>
           <Link to={"/login"}>

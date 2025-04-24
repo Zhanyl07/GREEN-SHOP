@@ -3,11 +3,6 @@ import "./WishList.scss"
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { deleteWish } from '../../redux/wish/wishSlice'
-
-// import delect from "../../assets/svg/delect.svg"
-// import cart1 from "../../assets/svg/cart1.svg"
-// import eyes from "../../assets/svg/eyes.svg"
-// import star from "../../assets/svg/star.svg"
 import banner from "../../assets/image/banner.png"
 
 function WishList() {
