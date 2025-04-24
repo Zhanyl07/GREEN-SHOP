@@ -1,4 +1,5 @@
 import { createBrowserRouter } from "react-router-dom";
+
 import Layout from "./components/Layout/Layout";
 import Home from './pages/Home';
 import Shopm from './pages/Shopm';
@@ -13,40 +14,69 @@ import About from "./components/About/About";
 import Post from "./components/Post/Post";
 import Profile from "./components/Profile/Index";
 import Account from "./pages/Account1";
+import WishList from "./components/WishList/Wishlist";
 
 export const myRouter = createBrowserRouter([
   {
     path: "/",
-    element: <Layout />,
+    element: <Layout/>,
     children: [
-      { path: "/", element: <Home /> },
-      { path: "/shop", element: <Shopm /> },
-      { path: "/cart", element: <Cart /> },
-      { path: "/shopingcart", element: <ShopingCartPage /> },
-      { path: "/productcheckout", element: <ProductCheckout /> },
-      { path: "/ordermodal", element: <OrderModal /> },
-      { path: "/categories", element: <Categories /> },
-      { path: "/banner", element: <Banner /> },
-      { path: "/about", element: <About /> },
-      { path: "/post", element: <Post /> },
+      { 
+        path: "/", 
+        element: <Home/> 
+      },
+      { 
+        path: "/shop", 
+        element: <Shopm/> 
+      },
+      { 
+        path: "/cart", 
+        element: <Cart/> 
+      },
+      { 
+        path: "/shopingcart", 
+        element: <ShopingCartPage/> 
+      },
+      { 
+        path: "/productcheckout", 
+        element: <ProductCheckout/> 
+      },
+      { 
+        path: "/ordermodal", 
+        element: <OrderModal/> 
+      },
+      { 
+        path: "/categories", 
+        element: <Categories/> 
+      },
+      { 
+        path: "/banner", 
+        element: <Banner/> 
+      },
+      { 
+        path: "/about",
+        element: <About/> 
+      },
+      { 
+        path: "/post", 
+        element: <Post/> 
+      },
       {
         path: "/login",
-        element: <AuthForm />
+        element: <AuthForm/>
       },
       {
         path: "/register",
-        element: <Profile />
+        element: <Profile/>
       },
       {
         path: "/account",
-        element: <Account />
+        element: <Account/>
       },
-
-
+      {
+        path: "/wishlist",
+        element: <WishList/>
+      },
     ]
-  },
-  // {
-  //   path: "/login",
-  //   element: <AuthForm />
-  // }
-]);
+  }
+])

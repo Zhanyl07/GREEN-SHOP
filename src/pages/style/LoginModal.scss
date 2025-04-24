@@ -1,0 +1,50 @@
+.modal{
+    width: 500px;
+height: 600px;
+border: 1px solid black;
+margin: 0 auto;
+
+.top-modal{
+
+    .logreg{
+        margin: 0 auto;
+        margin-top: 50px;
+        display: flex;
+        gap: 12px;
+
+        p{
+            color: rgb(70, 163, 88);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+        span{
+            color: rgb(61, 61, 61);
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 16px;
+        }
+        h5{
+            width: 5px;
+            height: 16px;
+            color: rgb(61, 61, 61);
+            font-family: Cera Pro;
+            font-size: 18px;
+            font-weight: 250;
+            line-height: 16px;
+        }
+    }
+    .lorem{
+        margin: 0 auto;
+        margin-top: 53px;
+        p{
+            color: rgb(61, 61, 61);
+font-size: 13px;
+font-weight: 400;
+line-height: 16px;
+        }
+    }
+    display: flex;
+    flex-direction: column;
+}
+}

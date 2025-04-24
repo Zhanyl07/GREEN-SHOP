@@ -2,6 +2,7 @@ import React from 'react'
 import './ShopCom.scss'
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+
 import shopgreen from '../../assets/image/shopgreen.png'
 import shopgreen2 from '../../assets/image/shopgreen2.png'
 import shopgreen3 from '../../assets/image/shopgreen3.png'
@@ -82,7 +83,7 @@ function ShopCom() {
                     </div>
                     <div className="buy-btn">
                         <button>BUY NOW</button>
-                        <Link to={"/shopingcart"}>
+                        <Link to="/shopingcart">
                         <button>ADD TO CART</button>
                         </Link>
                     </div>
