@@ -16,7 +16,7 @@ function Profile() {
       await auth.signOut();
       navigate("/register");
     } catch (error) {
-      console.error("Чыгууда ката кетти:", error);
+      console.error("", error);
     }
   };
 
