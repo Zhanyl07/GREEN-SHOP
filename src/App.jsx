@@ -2,6 +2,7 @@ import "./App.css";
 import { RouterProvider } from "react-router-dom";
 import { myRouter } from "./router";
 // import Shopping from './ShoppingCart/Shopping';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
   // const Shopping = () => {

@@ -1,10 +1,8 @@
 import React from 'react'
 import './CartCom.scss'
-import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import shopgreen from '../../assets/image/shopgreen.png'
 import shopgreen2 from '../../assets/image/shopgreen2.png'
-import shopgreen3 from '../../assets/image/shopgreen3.png'
 import star from '../../assets/svg/star.svg'
 import graystar from '../../assets/svg/graystar.svg'
 import heart from '../../assets/svg/heart.svg'
@@ -15,10 +13,7 @@ import facebook from "../../assets/svg/shopfacebook.svg"
 import twitter from "../../assets/svg/shoptwitter.svg"
 import linkedin from "../../assets/svg/shoplinkedin.svg"
 
-function CartCom() {
-
-const [currentSlide, setCurrentSlide] = useState(0);
-const totalSlides = 3; 
+function CartCom() { 
 
   return (
     <div className='cart'>

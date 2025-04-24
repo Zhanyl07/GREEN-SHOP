@@ -1,24 +1,117 @@
-// Banner.scss
-@import "~bootstrap/scss/bootstrap"; // подключишь только в этом компоненте
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(134.56deg, rgba(245, 245, 245, 0.5) -23.457%,rgba(245, 245, 245, 0.5) 107.508%);
+  border-radius: 10px;
+  height: 450px;
+  padding: 0 0 0 43px;
+  position: relative; 
 
+  .banner-text {
+    max-width: 50%;
+    color: #3d3d3d;
 
-.banner-carousel {
-    width: 100%;
-    overflow: hidden;
-  
-    .main-image {
-      width: 100%;
-      height: 500px;
-      object-fit: cover;
-      display: block;
+    p {
+      color: rgb(61, 61, 61);
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 10%;
+      text-transform: uppercase;
     }
-  
-    .carousel-caption {
-      bottom: 20%;
-      h3, p {
-        text-decoration: none;
+
+    .big-text {
+      font-size: 48px;
+      font-weight: 700;
+
+      span {
+        display: block;
+        font-size: 70px;
+        font-weight: 900;
+        line-height: 70px;
+        text-transform: uppercase;
+      }
+
+      p {
+        display: inline;
+        color: #46a358;
+        font-size: 70px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+    }
+
+    h5 {
+      color: rgb(114, 114, 114);
+      font-size: 14px;
+      font-weight: 400;
+      width: 587px;
+      height: 45px;
+    }
+
+    .btn-banner {
+      margin-top: 44px;
+      button {
+        width: 140px;
+        height: 40px;
+        background-color: #46a358;
         color: white;
+        border: none;
+        border-radius: 6px;
+        font-weight: 600;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s ease;
+
+        &:hover {
+          color: #388e3c;
+          background-color: #f5f5f5;
+          border: 1px solid #46a358;
+        }
       }
     }
   }
-  
+
+  .banner-img {
+    position: relative;
+    .mini-img {
+      position: absolute;
+      bottom: 37px;
+
+      img {
+        width: 135px;
+        height: 135px;
+      }
+    }
+
+    .big-img {
+      img {
+        width: 518px;
+        height: 518px;
+      }
+    }
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 20px;  
+    left: 50%;
+    transform: translateX(-50%); 
+    display: flex;
+    gap: 8px;
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(70, 163, 88, 0.3);
+      transition: background-color 0.3s ease;
+      cursor: pointer;
+
+      &.active {
+        background:  #46a358;
+      }
+    }
+  }
+}

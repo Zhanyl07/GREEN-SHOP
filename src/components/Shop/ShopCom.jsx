@@ -88,7 +88,9 @@ function ShopCom() {
                         </Link>
                     </div>
                     <div className="wish-btn">
+                        <Link to={'/wishlist'}>
                         <button><img src={heart} alt="" /></button>
+                        </Link>
                     </div>
                 </div>
             </div>
