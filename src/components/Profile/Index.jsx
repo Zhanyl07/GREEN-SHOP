@@ -23,12 +23,12 @@ function Profile() {
   return (
     <div className="profile-container">
       {user ? (
-        <div>
-          <h2>Добро пожаловать, {user.displayName || "Пользователь"}!</h2>
+        <div className="container">
+          <h2 style={{marginTop: "100px"}}>Добро пожаловать, {user.displayName || "Пользователь"}!</h2>
           <p>Email: {user.email}</p>
           <button onClick={handleLogout} className="logout-btn">
             Выйти
-          </button>
+          </button><br />
           <a href="/">home</a>
         </div>
       ) : (
