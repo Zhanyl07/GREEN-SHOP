@@ -1,10 +1,10 @@
 import React, { useRef, useEffect } from 'react';
-import "../pages/style/LoginModal.scss";
+import "../pages/style/RegisterModal.scss";
 import { Link } from 'react-router-dom';
 import google from '../assets/svg/google.svg';
 import fase from '../assets/svg/fase.svg';
 
-const LoginModal = ({ onClose }) => {
+const RegisterModal = ({ onClose }) => {
   const modalRef = useRef();
 
   useEffect(() => {
@@ -29,7 +29,7 @@ const LoginModal = ({ onClose }) => {
             <p>Login</p>
             </Link>
             <h5>|</h5>
-            <Link to="/registermodal">
+            <Link to={'/registermodal'}>
             <span>Register</span>
             </Link>
           </div>
@@ -62,4 +62,4 @@ const LoginModal = ({ onClose }) => {
   );
 };
 
-export default LoginModal;
+export default RegisterModal;

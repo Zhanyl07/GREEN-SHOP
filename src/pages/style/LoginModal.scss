@@ -1,10 +1,35 @@
-.modal{
-    width: 500px;
+.loginmodal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+
+.log-mod{
+ width: 500px;
 height: 600px;
 border: 1px solid black;
 margin: 0 auto;
+position: relative;
+background: rgb(255, 255, 255);
 
 .top-modal{
+
+     
+    .modal-close {
+        position: absolute;
+        top: 10px;
+        right: 15px;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+      }
 
     .logreg{
         margin: 0 auto;
@@ -12,18 +37,26 @@ margin: 0 auto;
         display: flex;
         gap: 12px;
 
-        p{
+        .hov{
             color: rgb(70, 163, 88);
             font-size: 20px;
             font-weight: 500;
             line-height: 16px;
         }
-        span{
+        
+        
+        a{
             color: rgb(61, 61, 61);
             font-size: 20px;
             font-weight: 500;
             line-height: 16px;
-        }
+            text-decoration: none;
+    }
+    a:hover{
+
+        color: rgb(70, 163, 88);
+
+    }
         h5{
             width: 5px;
             height: 16px;
@@ -39,12 +72,129 @@ margin: 0 auto;
         margin-top: 53px;
         p{
             color: rgb(61, 61, 61);
-font-size: 13px;
-font-weight: 400;
-line-height: 16px;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 16px;
         }
     }
     display: flex;
     flex-direction: column;
+
+   
 }
+
+.mid-modal{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin: 0 auto;
+    input{
+        width: 300px;
+        height: 40px;
+    }
+    .email{
+        box-sizing: border-box;
+border: 1px solid rgb(234, 234, 234);
+border-radius: 5px;
+padding-left: 10px;
+    }
+    .password{
+        box-sizing: border-box;
+border: 1px solid rgb(70, 163, 88);
+border-radius: 5px;
+
+    }
+    a{
+color: rgb(70, 163, 88);
+font-size: 14px;
+font-weight: 400;
+line-height: 16px;
+text-align: right;
+text-decoration: none;
+    }
+    .login-btn{
+        height: 45px;
+        border-radius: 5px;
+        background: rgb(70, 163, 88);
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 16px;
+        border: none;
+    
+
+}
+}
+.bottom-modal{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    margin-top: 46px;
+    gap: 10px;
+    .line{
+        width: 101px;
+        height: 0;
+        border: 1px solid rgb(234, 234, 234);
+        margin-top: 8px;
+    }
+    p{
+        width: 89px;
+        color: rgb(61, 61, 61);
+        font-size: 13px;
+        font-weight: 400;
+    }
+}
+
+.btm-input{
+    width: 300px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    .google{
+        width: 300px;
+        height: 40px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+border: 1px solid rgb(234, 234, 234);
+border-radius: 5px;
+
+        img{
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+    .fase{
+        width: 300px;
+        height: 40px;
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        padding-top: 10px;
+        box-sizing: border-box;
+        border: 1px solid rgb(234, 234, 234);
+        border-radius: 5px;
+        img{
+            width: 20px;
+            height: 20px;
+        }
+
+    }
+    
+}
+.btm-line{
+    background: rgb(70, 163, 88);
+    width: 500px;
+    height: 10px;
+    position: absolute;
+    bottom: 0;
+}  
+
+}
+
 }

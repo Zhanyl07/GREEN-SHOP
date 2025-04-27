@@ -13,11 +13,10 @@
 .wrapper {
   width: 1440px;
   margin: 0 auto;
-  /* border: 1px solid gray; */
 }
 
 .container {
-  width: 1200px;
+  width: 1440px;
   margin: 0 auto;
   margin-bottom: 50px;
   margin-top: 50px;
