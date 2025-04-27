@@ -1,86 +1,68 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from "react";
 import "../Categories/Categories.scss";
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from "react-redux";
 import { addWish, deleteWish } from "../../redux/Wish/WishSlice";
-import { addCart, removeCart } from '../../redux/Cart/CartSlice';
-import { Link } from 'react-router-dom';
-
+import { addCart, removeCart } from "../../redux/Cart/CartSlice";
+import { Link } from "react-router-dom";
 import sale from "../../assets/svg/sale.svg";
 import cart from "../../assets/svg/cart.svg";
 import wishlist from "../../assets/svg/wishlist.svg";
 import wishlistFilled from "../../assets/svg/wishlist-filled.svg";
 import search from "../../assets/svg/search.svg";
-import banner from "../../assets/image/banner.png";
+import productData from "../../data/products.json";
 
-const API = "https://680e0848c47cb8074d91df08.mockapi.io/api/getAssortment/price";
-
-function Categories() {
+const Categories = () => {
   const dispatch = useDispatch();
-  const { items: wishlistItems } = useSelector((state) => state.wishlist); // Получаем товары из списка желаемого
-  const { ali: cartItems } = useSelector((state) => state.carts); // Получаем товары из корзины
+  const { items: wishlistItems } = useSelector((state) => state.wishlist);
+  const { ali: cartItems } = useSelector((state) => state.carts);
 
-  const [products, setProducts] = useState([]); // Состояние для хранения продуктов
+  const [products, setProducts] = useState([]);
   const [cartMessage, setCartMessage] = useState("");
-  const [wishMessage, setWishMessage] = useState(""); 
+  const [wishMessage, setWishMessage] = useState("");
 
-  const containerRef = useRef(null);
-
-  // Загрузка данных с API
   useEffect(() => {
-    const fetchProducts = async () => {
-      try {
-        const response = await fetch(API);
-        const data = await response.json();
-        setProducts(data); // Сохраняем продукты в состоянии
-      } catch (error) {
-        console.error("Error fetching products:", error);
-      }
-    };
-    fetchProducts();
+    setProducts(productData);
   }, []);
 
-  // Проверка, есть ли товар в списке желаемого
-  const isWishlisted = (productId) => wishlistItems.some(item => item.id === productId);
+  const isWishlisted = (productId) =>
+    wishlistItems.some((item) => item.id === productId);
+  const isInCart = (productId) =>
+    cartItems.some((item) => item.id === productId);
 
-  // Проверка, есть ли товар в корзине
-  const isInCart = (productId) => cartItems.some(item => item.id === productId);
-
-  // Обработчик добавления товара в корзину
   const addToCart = (product) => {
     if (!isInCart(product.id)) {
-      dispatch(addCart(product)); // Добавление товара в корзину
-      setCartMessage(`Товар "${product.name}" добавлен в корзину`); // Уведомление
-
+      dispatch(addCart(product));
+      setCartMessage(`Товар "${product.name}" добавлен в корзину`);
+      
+      // Билдирүүнү 2 секунддан кийин жоюу
       setTimeout(() => {
-        setCartMessage(""); 
+        setCartMessage("");
       }, 2000);
     }
   };
 
-  // Обработчик удаления товара из корзины
   const removeFromCart = (productId) => {
-    dispatch(removeCart(productId)); // Удаление товара из корзины
+    dispatch(removeCart(productId));
   };
 
-  // Обработчик добавления/удаления товара в/из списка желаемого
   const toggleWishlist = (product) => {
     if (isWishlisted(product.id)) {
-      dispatch(deleteWish(product.id)); // Удаление товара из списка желаемого
+      dispatch(deleteWish(product.id));
     } else {
-      dispatch(addWish(product)); // Добавление товара в список желаемого
-      setWishMessage(`Товар "${product.name}" добавлен в изобранное`); 
+      dispatch(addWish(product));
+      setWishMessage(`Товар "${product.name}" добавлен в изобранное`);
 
+      // Билдирүүнү 2 секунддан кийин жоюу
       setTimeout(() => {
-        setWishMessage(""); 
+        setWishMessage("");
       }, 2000);
     }
-
   };
 
   return (
-    <div className='categories container' ref={containerRef}>
-      <div className='category'>
-        <div className='category-plants'>
+    <div className="categories container">
+      <div className="category">
+        <div className="category-plants">
           <h2>Categories</h2>
           <ul>
             <li>House Plants</li>
@@ -97,7 +79,7 @@ function Categories() {
             <button className="filter-btn">Filter</button>
           </div>
 
-          <div className='size'>
+          <div className="size">
             <h2>Size</h2>
             <ul>
               <li>Small</li>
@@ -106,13 +88,13 @@ function Categories() {
             </ul>
           </div>
 
-          <div className='sale-img'>
+          <div className="sale-img">
             <img src={sale} alt="sale" />
           </div>
         </div>
 
-        <div className='all-plants'>
-          <div className='top-plants'>
+        <div className="all-plants">
+          <div className="top-plants">
             <ul>
               <li>All Plants</li>
               <li>New Arrivals</li>
@@ -129,35 +111,38 @@ function Categories() {
             </div>
           </div>
 
-          <div className='bottom-plants'>
+          <div className="bottom-plants">
             {products.map((product) => (
-              <div className='box' key={product.id}>
-                <div className='top-card'>
-                  <div className='discount'>
+              <div className="box" key={product.id}>
+                <div className="top-card">
+                  <div className="discount">
                     <h3>13% OFF</h3>
                   </div>
-                  <div className='box-img'>
+                  <div className="box-img">
                     <img src={product.urlPhoto} alt={product.name} />
                   </div>
-                  <div className='add'>
-                    <img 
-                      src={isInCart(product.id) ? cart : cart} 
-                      alt="cart" 
-                      onClick={() => isInCart(product.id) ? removeFromCart(product.id) : addToCart(product)} 
+                  <div className="add">
+                    <img
+                      src={isInCart(product.id) ? cart : cart}
+                      alt="cart"
+                      onClick={() =>
+                        isInCart(product.id)
+                          ? removeFromCart(product.id)
+                          : addToCart(product)
+                      }
                     />
-                    {/* Лайк / не лайк */}
-                    <img 
-                      src={isWishlisted(product.id) ? wishlistFilled : wishlist} 
-                      alt="wishlist" 
-                      onClick={() => toggleWishlist(product)} 
-                      style={{ cursor: 'pointer' }} 
+                    <img
+                      src={isWishlisted(product.id) ? wishlistFilled : wishlist}
+                      alt="wishlist"
+                      onClick={() => toggleWishlist(product)}
+                      style={{ cursor: "pointer" }}
                     />
                     <img src={search} alt="search" />
                   </div>
                 </div>
-                <div className='bottom-card'>
+                <div className="bottom-card">
                   <h3>{product.name}</h3>
-                  <div className='price'>
+                  <div className="price">
                     <b>${product.price}</b>
                     <del>${product.originalPrice}</del>
                   </div>
@@ -168,17 +153,12 @@ function Categories() {
         </div>
       </div>
 
-      {/* Уведомление о добавлении товара */}
+      {/* Билдирүүлөр */}
       {cartMessage && (
-        <div className="cart-message">
-          {cartMessage}
-        </div>
+        <div className="cart-message">{cartMessage}</div>
       )}
-
       {wishMessage && (
-        <div className="wish-message">
-          {wishMessage}
-        </div>
+        <div className="wish-message">{wishMessage}</div>
       )}
 
       <div className="pagination">
@@ -198,6 +178,6 @@ function Categories() {
       </div>
     </div>
   );
-}
+};
 
 export default Categories;

@@ -3,7 +3,7 @@
   width: 1200px;
   height: auto;
   margin-top: 100px;
-  
+
   a {
     text-decoration: none;
   }
@@ -54,7 +54,7 @@
       .total {
         margin-left: 97px;
       }
-      
+
       .text1 {
         margin-left: 197px;
 
@@ -141,7 +141,11 @@
 
           button {
             border-radius: 31px;
-            background: linear-gradient(180deg, rgb(70, 163, 88), rgba(70, 163, 88, 0.8) 100%);
+            background: linear-gradient(
+              180deg,
+              rgb(70, 163, 88),
+              rgba(70, 163, 88, 0.8) 100%
+            );
             border: none;
             width: 21.71px;
             height: 25px;
@@ -391,4 +395,3 @@
     }
   }
 }
-
