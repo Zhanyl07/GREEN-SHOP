@@ -1,0 +1,65 @@
+[
+  {
+    "id": "1",
+    "name": "Barberton Daisy",
+    "price": 119.0,
+    "originalPrice": 70,
+    "urlPhoto": "https://elementor.dostguru.com/hyper_03/wp-content/uploads/2022/03/15.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Angel Wing Begonia",
+    "price": 169.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://i.pinimg.com/736x/cf/c5/b4/cfc5b41c181435691b65fa411834dc21.jpg"
+  },
+  {
+    "id": "3",
+    "name": "African Violet",
+    "price": 119.0,
+    "originalPrice": 229.0,
+    "urlPhoto": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSzLE2dsJPJgVlXhYHlid8MAoM_siADDA0iJwnvr3C7LJhIet24"
+  },
+  {
+    "id": "4",
+    "name": "Beach Spider Lily",
+    "price": 129.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcTggTKIq8IyEkoV24tJ0U2K2BcRWM7eA5y92olF6s5A7SNFkyrp"
+  },
+  {
+    "id": "5",
+    "name": "Blushing Bromeliad",
+    "price": 139.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://khuonvien.com/wp-content/uploads/2021/07/12.webp"
+  },
+  {
+    "id": "6",
+    "name": "Aluminum Plant",
+    "price": 179.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://optima.posthemes.com/demo5/plant1/283-large_default/remedial-aloe-vera-plant.jpg"
+  },
+  {
+    "id": "7",
+    "name": "Bird's Nest Fern",
+    "price": 99.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://images.meesho.com/images/products/317498068/duh0d_512.webp"
+  },
+  {
+    "id": "8",
+    "name": "Broadleaf Lady Palm",
+    "price": 59.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://s.alicdn.com/@sc04/kf/U29d5ac41f68a425e90c8bb5a753ba8faP.jpg_720x720q50.jpg"
+  },
+  {
+    "id": "9",
+    "name": "Chinese Evergreen",
+    "price": 39.0,
+    "originalPrice": 80,
+    "urlPhoto": "https://iposuda.ru/images/thumbnails/230/240/detailed/62/470752-633.jpeg"
+  }
+]

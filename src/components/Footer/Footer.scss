@@ -1,13 +1,11 @@
 .footer {
     font-family: "Poppins", sans-serif;
-
     .in-footer {
 
         .top {
             display: flex;
-            width: 1152px;
+            width: 1440px;
             height: 201px;
-            margin: 0 auto;
             margin-bottom: 100px;
             gap: 70px;
             margin-top: 128px;
@@ -117,6 +115,7 @@
     
         .center {
             display: flex;
+            align-items: center;
             height: 88px;
             background-color: #46A3581A;
             border-top: 1px solid #95cea0;
@@ -128,22 +127,35 @@
 
             .logo {
                 margin-left: 30px;
+                
             }
 
             .location {
                 display: flex;
                 gap: 5px;
                 width: 250px;
+                img{
+                    width: 30px;
+                    height: 30px;
+                }
             }
 
             .email {
                 display: flex;
                 gap: 5px;
+                img{
+                    width: 20px;
+                    height: 23px;
+                }
             }
 
             .call {
                 display: flex;
                 gap: 5px;
+                img{
+                    width: 20px;
+                    height: 23px;
+                }
             }
             
         }

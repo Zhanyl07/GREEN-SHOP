@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     right: 0;
-    left: 20px;
     background: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     z-index: 999;
@@ -36,6 +35,7 @@
             transition: 0.5s;
         }
     }
+    
 
     .search {
         display: flex;
@@ -43,6 +43,26 @@
         gap: 30px;
 
         .wishlist {
+            position: relative;
+    
+            .wishlist-badge {
+                position: absolute;
+                top: -6px;
+                right: -11px;
+                background-color: #46A358;
+                color: #fff;
+                border: 2px solid white;
+                font-size: 10px;
+                font-weight: 600;
+                border-radius: 50%;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+        .carts{
             position: relative;
     
             .wishlist-badge {
