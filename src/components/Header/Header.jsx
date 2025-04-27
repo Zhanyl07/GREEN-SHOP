@@ -2,28 +2,31 @@ import React from 'react'
 import "../Header/Header.scss"
 import { Link } from 'react-router-dom'
 import { auth } from "../../firebase";
-import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux"; 
-
+import { useState } from 'react';
 import logo from "../../assets/svg/logo.svg"
+import {  useNavigate } from "react-router-dom";
 import search from "../../assets/svg/search.svg"
 import cart from "../../assets/svg/cart.svg"
-import login from "../../assets/svg/login.svg"
+
+import logind from "../../assets/svg/login.svg"
 import wishlist from "../../assets/svg/wishlist.svg"
-
+import LoginModal from '../../pages/LoginModal';
 function Header() {
-  const navigate = useNavigate();
   const wishlistItems = useSelector((state) => state.wishlist.items);
+  const [showModal, setLoginModal] = useState(false)
 
 
-  const handlePersonClick = () => {
-    if (auth.currentUser) {
-      navigate("/profile");
-    } else {
-      navigate("/register");
-    }
-  };
 
+      const navigate = useNavigate();
+
+      const handlePersonClick = () => {
+        if (auth.currentUser) {
+          navigate("/profile");
+        } else {
+          navigate("/register");
+        }
+      };
   return (
     <div>
       <div className='header container'>
@@ -54,17 +57,19 @@ function Header() {
           <Link to="/shopingcart">
             <img src={cart} alt="cart" />
           </Link>
-          <Link to={"/login"}>
+        
             <div className='login'>
               <button onClick={handlePersonClick}>
-                <img src={login} alt="login" />
+                <img src={logind} alt="login" />
                 Login
               </button>
             </div>
-          </Link>
+
         </div>
 
       </div>
+
+      {showModal && <LoginModal onClose={handleCloseModal} />}
     </div>
   )
 }
