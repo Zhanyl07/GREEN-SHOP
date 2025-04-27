@@ -20,6 +20,9 @@ import BlogsGREEN from "./pages/BlogsGREEN";
 import BlogDetails from "./pages/BlogDetails";
 import { path } from "framer-motion/client";
 import Plants from "./pages/Plants";
+import Page2 from "./pages/Page2";
+import Page4 from "./pages/Page4";
+import Page3 from "./pages/Page3";
 export const myRouter = createBrowserRouter([
   {
     path: "/",
@@ -51,6 +54,9 @@ export const myRouter = createBrowserRouter([
       path: "/plantscare",
       element: <Plants/>
       }
+      { path: "/page2", element: <Page2 /> },
+      { path: "/page3", element: <Page3 /> },
+      { path: "/page4", element: <Page4 /> },
     ]
   }
 ]);

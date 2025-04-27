@@ -23,7 +23,7 @@ const AuthForm = () => {
 
   async function signup() {
     if (!user.email || !user.password || !user.name) {
-      toast.error("Бардык талааларды толтуруңуз.");
+      toast.error("Please fill in all fields..");
       return;
     }
 
@@ -34,15 +34,15 @@ const AuthForm = () => {
         user.email,
         user.password
       );
-      console.log("Каттоо ийгиликтүү:", res.user);
+      console.log("Registration successful:", res.user);
 
-      toast.success("Ийгиликтүү катталдыңыз!");
+      toast.success("Registration successful!");
 
       setTimeout(() => {
-        navigate("/profile"); // профил баракчага өтөт
+        navigate("/profile"); 
       }, 2000);
     } catch (error) {
-      console.error("Каттоо ката:", error);
+      console.error("Registration error:", error);
       toast.error(error.message);
     } finally {
       setLoading(false);
@@ -51,7 +51,7 @@ const AuthForm = () => {
 
   async function login() {
     if (!user.email || !user.password) {
-      toast.error("Email жана сырсөздү толтуруңуз.");
+      toast.error("Fill in your email and password..");
       return;
     }
 
@@ -62,16 +62,16 @@ const AuthForm = () => {
         user.email,
         user.password
       );
-      console.log("Кирүү ийгиликтүү:", res.user);
+      console.log("Login successful:", res.user);
 
-      toast.success("Кош келиңиз!");
+      toast.success("You welcome!");
 
       setTimeout(() => {
-        navigate("/profile"); // логин болгондо башка баракча
+        navigate("/profile");
       }, 2000);
     } catch (error) {
-      console.error("Кирүү ката:", error);
-      toast.error("Email же сырсөз туура эмес.");
+      console.error("Login error:", error);
+      toast.error("Incorrect email or password.");
     } finally {
       setLoading(false);
     }
@@ -85,7 +85,7 @@ const AuthForm = () => {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h2>{isLogin ? "Кирүү" : "Registration "}</h2>
+        <h2>{isLogin ? "Log in" : "Registration "}</h2>
 
         <form
           onSubmit={(event) => {
@@ -132,12 +132,12 @@ const AuthForm = () => {
           </div>
 
           <button type="submit" className="auth-button" disabled={loading}>
-            {loading ? "Күтүңүз..." : isLogin ? "Кирүү" : "Sign Up"}
+            {loading ? "Wait..." : isLogin ? "Log in" : "Sign Up"}
           </button>
         </form>
 
         <p className="toggle-text" onClick={toggleForm}>
-          {isLogin ? "Каттала элексизби?" : "Already registered? Log In"}
+          {isLogin ? "Haven't registered yet?" : "Already registered? Log In"}
         </p>
       </div>
       <ToastContainer />

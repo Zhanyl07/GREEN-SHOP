@@ -4,19 +4,20 @@ import { Link } from 'react-router-dom'
 import { auth } from "../../firebase";
 import { useSelector } from "react-redux"; 
 import { useState } from 'react';
-import logo from "../../assets/svg/logo.svg"
 import {  useNavigate } from "react-router-dom";
+
+import logo from "../../assets/svg/logo.svg"
 import search from "../../assets/svg/search.svg"
 import cart from "../../assets/svg/cart.svg"
 
 import logind from "../../assets/svg/login.svg"
 import wishlist from "../../assets/svg/wishlist.svg"
 import LoginModal from '../../pages/LoginModal';
+
 function Header() {
   const wishlistItems = useSelector((state) => state.wishlist.items);
+  const cartItems = useSelector((state) => state.carts.ali);
   const [showModal, setLoginModal] = useState(false)
-
-
 
       const navigate = useNavigate();
 
@@ -27,6 +28,8 @@ function Header() {
           navigate("/register");
         }
       };
+
+      
   return (
     <div>
       <div className='header container'>
@@ -54,8 +57,11 @@ function Header() {
               )}
             </div>
           </Link>
-          <Link to="/shopingcart">
+          <Link className='carts' to="/shopingcart">
             <img src={cart} alt="cart" />
+              {cartItems.length > 0 && (
+                <span className="wishlist-badge">{cartItems.length}</span>
+              )}
           </Link>
         
             <div className='login'>
