@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
     height: 75vh;
-    background-color: #f4f4f4;
     margin-top: 100px;
   }
   
@@ -41,7 +40,7 @@
   
   .auth-button {
     width: 100%;
-    background: #007bff;
+    background: #46A358;
     color: white;
     padding: 10px;
     border: none;
@@ -51,12 +50,13 @@
   }
   
   .auth-button:hover {
-    background: #0056b3;
+    transition: all 1s;
+    background: #489551;
   }
   
   .toggle-text {
     margin-top: 10px;
-    color: #007bff;
+    color: #ee3c05;
     cursor: pointer;
   }
   
