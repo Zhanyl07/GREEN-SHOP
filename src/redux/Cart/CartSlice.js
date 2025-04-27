@@ -1,46 +1,40 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-// Функция для загрузки товаров из LocalStorage
 const loadFromLocalStorage = () => {
     const data = localStorage.getItem('cartItems');
-    return data ? JSON.parse(data) : []; // Если данные есть, возвращаем их, если нет — пустой массив
+    return data ? JSON.parse(data) : []; 
 };
 
-// Функция для сохранения товаров в LocalStorage
 const saveToLocalStorage = (data) => {
-    localStorage.setItem('cartItems', JSON.stringify(data)); // Сохраняем данные в LocalStorage
+    localStorage.setItem('cartItems', JSON.stringify(data)); 
 };
 
 const cartSlice = createSlice({
     name: 'carts',
     initialState: {
-        ali: loadFromLocalStorage() // Инициализируем состояние данными из LocalStorage, если они есть
+        ali: loadFromLocalStorage() 
     },
     reducers: {
-        // Добавление товара в корзину
         addCart: (state, action) => {
-            state.ali.push({ ...action.payload, isLiked: false }); // Добавляем товар с флагом "не понравился"
-            saveToLocalStorage(state.ali); // Сохраняем обновлённое состояние в LocalStorage
+            state.ali.push({ ...action.payload, isLiked: false }); 
+            saveToLocalStorage(state.ali); 
         },
-        // Удаление товара из корзины
         removeCart: (state, action) => {
-            state.ali = state.ali.filter(item => item.id !== action.payload); // Фильтруем товар по id
-            saveToLocalStorage(state.ali); // Сохраняем обновлённое состояние в LocalStorage
+            state.ali = state.ali.filter(item => item.id !== action.payload); 
+            saveToLocalStorage(state.ali); 
         },
-        // Изменение состояния лайка товара
         toggleLike: (state, action) => {
             state.ali = state.ali.map(item =>
-                item.id === action.payload ? { ...item, isLiked: !item.isLiked } : item // Переключаем флаг лайка
+                item.id === action.payload ? { ...item, isLiked: !item.isLiked } : item 
             );
-            saveToLocalStorage(state.ali); // Сохраняем обновлённое состояние в LocalStorage
+            saveToLocalStorage(state.ali); 
         },
-        // Обновление корзины (например, после изменения количества товаров)
         updateCart: (state, action) => {
-            state.ali = action.payload; // Обновляем корзину новыми данными
-            saveToLocalStorage(state.ali); // Сохраняем обновлённое состояние в LocalStorage
+            state.ali = action.payload; 
+            saveToLocalStorage(state.ali);
         }
     }
 });
 
 export const { addCart, removeCart, toggleLike, updateCart } = cartSlice.actions;
-export default cartSlice.reducer; // Экспортируем редуктор для использования в store
+export default cartSlice.reducer;
