@@ -55,7 +55,7 @@ const Account = () => {
               <label>Phone Number <span>*</span></label>
               <div className="phone-input">
                 <select>
-                  <option>+966</option>
+                  <option>+996</option>
                   <option>+7</option>
                   <option>+1</option>
                 </select>
