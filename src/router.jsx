@@ -17,6 +17,9 @@ import WishList from "./components/WishList/Wishlist";
 import LoginModal from './pages/LoginModal';
 import RegisterModal from "./pages/RegisterModal";
 import BlogsGREEN from "./pages/BlogsGREEN";
+import Page2 from "./pages/Page2";
+import Page4 from "./pages/Page4";
+import Page3 from "./pages/Page3";
 export const myRouter = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +43,9 @@ export const myRouter = createBrowserRouter([
       { path: '/registermodal', element: <RegisterModal /> },
       { path: "/register", element: <AuthForm /> },
       { path: "/blogs", element: <BlogsGREEN /> },
-
+      { path: "/page2", element: <Page2 /> },
+      { path: "/page3", element: <Page3 /> },
+      { path: "/page4", element: <Page4 /> },
     ]
   }
 ]);

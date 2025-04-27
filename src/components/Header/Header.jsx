@@ -16,6 +16,7 @@ import LoginModal from '../../pages/LoginModal';
 
 function Header() {
   const wishlistItems = useSelector((state) => state.wishlist.items);
+  const cartItems = useSelector((state) => state.carts.ali);
   const [showModal, setLoginModal] = useState(false)
 
       const navigate = useNavigate();
@@ -56,8 +57,11 @@ function Header() {
               )}
             </div>
           </Link>
-          <Link to="/shopingcart">
+          <Link className='carts' to="/shopingcart">
             <img src={cart} alt="cart" />
+              {cartItems.length > 0 && (
+                <span className="wishlist-badge">{cartItems.length}</span>
+              )}
           </Link>
         
             <div className='login'>

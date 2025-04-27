@@ -3,6 +3,8 @@ import "../Categories/Categories.scss";
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, deleteWish } from "../../redux/Wish/WishSlice";
 import { addCart, removeCart } from '../../redux/Cart/CartSlice';
+import { Link } from 'react-router-dom';
+
 import sale from "../../assets/svg/sale.svg";
 import cart from "../../assets/svg/cart.svg";
 import wishlist from "../../assets/svg/wishlist.svg";
@@ -27,7 +29,7 @@ function Categories() {
   
   const containerRef = useRef(null);
   const [cartMessage, setCartMessage] = useState("");
-  const [wishMessage, setWishMessage] = useState(""); // Состояние для уведомления
+  const [wishMessage, setWishMessage] = useState(""); 
 
    // Состояние для уведомления
 
@@ -43,7 +45,6 @@ function Categories() {
       dispatch(addCart(product)); // Добавление товара в корзину
       setCartMessage(`Товар "${product.name}" добавлен в корзину`); // Уведомление
 
-      // Очищаем сообщение через 2 секунды
       setTimeout(() => {
         setCartMessage(""); 
       }, 2000);
@@ -68,7 +69,6 @@ function Categories() {
       }, 2000);
 
     }
-
     
   };
 
@@ -177,10 +177,18 @@ function Categories() {
       )}
 
       <div className="pagination">
-        <button className="page active">1</button>
-        <button className="page">2</button>
-        <button className="page">3</button>
-        <button className="page">4</button>
+        <Link to="/">
+          <button className="page active">1</button>
+        </Link>
+        <Link to="/page2">
+          <button className="page active">2</button>
+        </Link>
+        <Link to="/page3">
+          <button className="page active">3</button>
+        </Link>
+        <Link to="/page4">
+          <button className="page active">4</button>
+        </Link>
         <button className="page">&gt;</button>
       </div>
     </div>

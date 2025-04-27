@@ -64,6 +64,27 @@
             }
         }
 
+        .carts {
+            position: relative;
+
+            .wishlist-badge {
+                position: absolute;
+                top: -6px;
+                right: -11px;
+                background-color: #46A358;
+                color: #fff;
+                border: 2px solid white;
+                font-size: 10px;
+                font-weight: 600;
+                border-radius: 50%;
+                width: 18px;
+                height: 18px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
         .login {
             
             button {
