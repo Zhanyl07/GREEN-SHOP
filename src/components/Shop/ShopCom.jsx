@@ -14,7 +14,10 @@ import email from "../../assets/svg/shopemail.svg";
 import facebook from "../../assets/svg/shopfacebook.svg";
 import twitter from "../../assets/svg/shoptwitter.svg";
 import linkedin from "../../assets/svg/shoplinkedin.svg";
-
+import tr from '../../assets/image/tr.png'
+import tr2 from '../../assets/image/tr2.png'
+import tr3 from '../../assets/image/tr3.png'
+import tr4 from '../../assets/image/tr4.png'
 function ShopCom() {
   const [mainImage, setMainImage] = useState(shopgreen);
   const handleImageClick = (imageSrc) => {
@@ -41,24 +44,24 @@ function ShopCom() {
           <div className="shop-flover">
             <div className="flover1">
               <img
-                src={shopgreen2}
+                src={tr4}
                 alt=""
-                onClick={() => handleImageClick(shopgreen2)} 
+                onClick={() => handleImageClick(tr4)} 
               />
               <img
-                src={shopgreen3}
+                src={tr}
                 alt=""
-                onClick={() => handleImageClick(shopgreen3)}
+                onClick={() => handleImageClick(tr)}
               />
               <img
-                src={shopgreen2}
+                src={tr2}
                 alt=""
-                onClick={() => handleImageClick(shopgreen2)}
+                onClick={() => handleImageClick(tr2)}
               />
               <img
-                src={shopgreen3}
+                src={tr3}
                 alt=""
-                onClick={() => handleImageClick(shopgreen3)}
+                onClick={() => handleImageClick(tr3)}
               />
             </div>
             <div className="flover2">

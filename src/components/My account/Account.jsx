@@ -10,7 +10,7 @@ import repost from "../../assets/svg/repost.svg";
 import dowlands from "../../assets/svg/dowlands.svg";
 import support from "../../assets/svg/support.svg";
 import lagout from "../../assets/svg/lagout.svg"; 
-
+import { Link } from "react-router-dom";
 const Account = () => {
   const [user, setUser] = useState(null);
 
@@ -48,13 +48,18 @@ const Account = () => {
           </div>
           <div className="flex">
             <img src={orders} alt="Orders" />
+            <Link to={"/cart"}>
             <li>Orders</li>
+            </Link>
           </div>
           <div className="flex">
             <img src={wishlist} alt="Wishlist" />
+            <Link to={'/wishlist'}>
             <li>Wishlist</li>
+            </Link>
           </div>
           <div className="flex">
+
             <img src={repost} alt="Reports" />
             <li>Reports</li>
           </div>
