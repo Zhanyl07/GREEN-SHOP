@@ -53,7 +53,7 @@ export const myRouter = createBrowserRouter([
       {
       path: "/plantscare",
       element: <Plants/>
-      }
+      },
       { path: "/page2", element: <Page2 /> },
       { path: "/page3", element: <Page3 /> },
       { path: "/page4", element: <Page4 /> },
