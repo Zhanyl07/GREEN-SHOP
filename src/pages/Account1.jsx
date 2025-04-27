@@ -4,7 +4,6 @@ function Account1() {
   return (
     <div>
         <Account/>
-      
     </div>
   )
 }

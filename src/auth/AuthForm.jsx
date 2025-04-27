@@ -1,11 +1,12 @@
-// AuthForm.jsx
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./AuthForm.scss";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  onAuthStateChanged,
+  signOut,
 } from "firebase/auth";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -15,6 +16,20 @@ const AuthForm = () => {
   const [isLogin, setIsLogin] = useState(false);
   const [user, setUser] = useState({ name: "", email: "", password: "" });
   const [loading, setLoading] = useState(false);
+  const [currentUser, setCurrentUser] = useState(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      if (user) {
+        setCurrentUser(user);
+        navigate("/account");
+      } else {
+        setCurrentUser(null);
+      }
+    });
+
+    return unsubscribe;
+  }, [navigate]);
 
   function handler(event) {
     const { value, name } = event.target;
@@ -39,7 +54,7 @@ const AuthForm = () => {
       toast.success("Registration successful!");
 
       setTimeout(() => {
-        navigate("/profile"); 
+        navigate("/account");
       }, 2000);
     } catch (error) {
       console.error("Registration error:", error);
@@ -64,10 +79,10 @@ const AuthForm = () => {
       );
       console.log("Login successful:", res.user);
 
-      toast.success("You welcome!");
+      toast.success("You are welcome!");
 
       setTimeout(() => {
-        navigate("/profile");
+        navigate("/account");
       }, 2000);
     } catch (error) {
       console.error("Login error:", error);
@@ -85,7 +100,7 @@ const AuthForm = () => {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h2>{isLogin ? "Log in" : "Registration "}</h2>
+        <h2>{isLogin ? "Log in" : "Registration"}</h2>
 
         <form
           onSubmit={(event) => {
@@ -95,7 +110,7 @@ const AuthForm = () => {
         >
           {!isLogin && (
             <div className="input-group">
-              <label> Your Name</label>
+              <label>Your Name</label>
               <input
                 type="text"
                 name="name"
