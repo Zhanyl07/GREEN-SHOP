@@ -1,4 +1,3 @@
-
 .categories {
     margin-top: 79px;
 
@@ -99,7 +98,6 @@
                     li:hover {
                         color: #46A358;
                         transition: 0.5s;
-                        // border-bottom: 1px solid #46A358;
                     }
                 }
     
@@ -190,84 +188,9 @@
                 }
     
                 &:hover .box {
-                    opacity: 1;
-                    transition: 1s;
-                    border-top: 1px solid #46A358;
+                    opacity: 1
                 }
             }
-        }
-    }
-
-
-    .cart-message {
-        position: fixed;
-        bottom: 20px;
-        left: 20%;
-        transform: translateX(-50%);
-        background-color: #28a745;
-        color: white;
-        padding: 10px ;
-        border-radius: 5px;
-        font-size: 14px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        opacity: 1;
-        height: 40px;
-        width: 320px;
-        transition: opacity 0.5s ease-out;
-      }
-      
-      .wish-message {
-        position: fixed;
-        bottom: 20px;
-        left: 20%;
-        transform: translateX(-50%);
-        background-color: #28a745;
-        color: white;
-        padding: 10px;
-        border-radius: 5px;
-        font-size: 14px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        z-index: 9999;
-        opacity: 1;
-        height: 40px;
-        width: 350px;
-        transition: opacity 0.5s ease-out;
-      }
-      
-
-
-    .pagination {
-        display: flex;
-        gap: 8px;
-        align-items: center;
-        justify-content: end;
-        padding: 20px;
-      
-        .page {
-          padding: 8px 14px;
-          border: 1px solid #ddd;
-          background-color: white;
-          color: rgb(86, 86, 86);
-          cursor: pointer;
-          border-radius: 6px;
-          font-size: 16px;
-          transition: background-color 0.2s;
-      
-          &:hover {
-            background-color: #f0f0f0;
-          }
-
-          .active {
-            padding: 8px 14px;
-          }
-      
-          &.active {
-            background-color: #46A358;
-            color: white;
-            border: 1px solid #46A358;
-            width: 40px;
-          }
         }
     }
 }
