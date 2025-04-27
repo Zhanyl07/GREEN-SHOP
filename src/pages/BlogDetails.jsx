@@ -1,7 +1,6 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
-import "./BlogDetails.scss";
-
+import './style/BlockDetail.scss'
 const blogPosts = [
   {
     id: 1,

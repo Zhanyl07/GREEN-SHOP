@@ -17,6 +17,9 @@ import WishList from "./components/WishList/Wishlist";
 import LoginModal from './pages/LoginModal';
 import RegisterModal from "./pages/RegisterModal";
 import BlogsGREEN from "./pages/BlogsGREEN";
+import BlogDetails from "./pages/BlogDetails";
+import { path } from "framer-motion/client";
+import Plants from "./pages/Plants";
 export const myRouter = createBrowserRouter([
   {
     path: "/",
@@ -40,7 +43,14 @@ export const myRouter = createBrowserRouter([
       { path: '/registermodal', element: <RegisterModal /> },
       { path: "/register", element: <AuthForm /> },
       { path: "/blogs", element: <BlogsGREEN /> },
-
+      {
+        path: "/blog/:id",
+        element: <BlogDetails/>
+      },
+      {
+      path: "/plantscare",
+      element: <Plants/>
+      }
     ]
   }
 ]);

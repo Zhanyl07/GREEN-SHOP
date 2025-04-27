@@ -38,7 +38,7 @@ function Header() {
         <div className='lists'>
           <Link className='home' to="/">Home</Link>
           <Link to="/shop">Shop</Link>
-          <Link to="/account">Plant Care</Link>
+          <Link to="/plantscare">Plant Care</Link>
           <Link to="/blogs">Blogs</Link>
         </div>
 

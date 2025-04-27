@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "../Categories/Categories.scss";
 import { useSelector, useDispatch } from 'react-redux';
 import { addWish, deleteWish } from "../../redux/Wish/WishSlice";
@@ -10,30 +10,36 @@ import wishlistFilled from "../../assets/svg/wishlist-filled.svg";
 import search from "../../assets/svg/search.svg";
 import banner from "../../assets/image/banner.png";
 
+const API = "https://680e0848c47cb8074d91df08.mockapi.io/api/getAssortment/price";
+
 function Categories() {
   const dispatch = useDispatch();
   const { items: wishlistItems } = useSelector((state) => state.wishlist); // Получаем товары из списка желаемого
   const { ali: cartItems } = useSelector((state) => state.carts); // Получаем товары из корзины
 
-  const [products] = useState([
-    {
-      id: 1,
-      name: "Barberton Daisy",
-      price: 119,
-      originalPrice: 229,
-      image: banner,
-    }
-  ]);
-  
-  const containerRef = useRef(null);
+  const [products, setProducts] = useState([]); // Состояние для хранения продуктов
   const [cartMessage, setCartMessage] = useState("");
   const [wishMessage, setWishMessage] = useState(""); // Состояние для уведомления
 
-   // Состояние для уведомления
+  const containerRef = useRef(null);
+
+  // Загрузка данных с API
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const response = await fetch(API);
+        const data = await response.json();
+        setProducts(data); // Сохраняем продукты в состоянии
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      }
+    };
+    fetchProducts();
+  }, []);
 
   // Проверка, есть ли товар в списке желаемого
   const isWishlisted = (productId) => wishlistItems.some(item => item.id === productId);
-  
+
   // Проверка, есть ли товар в корзине
   const isInCart = (productId) => cartItems.some(item => item.id === productId);
 
@@ -66,10 +72,7 @@ function Categories() {
       setTimeout(() => {
         setWishMessage(""); 
       }, 2000);
-
     }
-
-    
   };
 
   return (
@@ -132,7 +135,7 @@ function Categories() {
                     <h3>13% OFF</h3>
                   </div>
                   <div className='box-img'>
-                    <img src={product.image} alt={product.name} />
+                    <img src={product.urlPhoto} alt={product.name} />
                   </div>
                   <div className='add'>
                     <img 
@@ -170,7 +173,7 @@ function Categories() {
         </div>
       )}
 
-    {wishMessage && (
+      {wishMessage && (
         <div className="wish-message">
           {wishMessage}
         </div>
