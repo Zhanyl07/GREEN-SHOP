@@ -85,7 +85,7 @@ const AuthForm = () => {
   return (
     <div className="auth-container">
       <div className="auth-box">
-        <h2>{isLogin ? "Кирүү" : "Катталуу"}</h2>
+        <h2>{isLogin ? "Кирүү" : "Registration "}</h2>
 
         <form
           onSubmit={(event) => {
@@ -95,13 +95,13 @@ const AuthForm = () => {
         >
           {!isLogin && (
             <div className="input-group">
-              <label>Атыңыз</label>
+              <label> Your Name</label>
               <input
                 type="text"
                 name="name"
                 value={user.name}
                 onChange={handler}
-                placeholder="Атыңыз"
+                placeholder="Your Name"
                 required
               />
             </div>
@@ -120,24 +120,24 @@ const AuthForm = () => {
           </div>
 
           <div className="input-group">
-            <label>Сырсөз</label>
+            <label>Password</label>
             <input
               onChange={handler}
               value={user.password}
               name="password"
               type="password"
-              placeholder="Сырсөз"
+              placeholder="Password"
               required
             />
           </div>
 
           <button type="submit" className="auth-button" disabled={loading}>
-            {loading ? "Күтүңүз..." : isLogin ? "Кирүү" : "Катталуу"}
+            {loading ? "Күтүңүз..." : isLogin ? "Кирүү" : "Sign Up"}
           </button>
         </form>
 
         <p className="toggle-text" onClick={toggleForm}>
-          {isLogin ? "Каттала элексизби?" : "Катталгансызбы? Кирүү"}
+          {isLogin ? "Каттала элексизби?" : "Already registered? Log In"}
         </p>
       </div>
       <ToastContainer />
