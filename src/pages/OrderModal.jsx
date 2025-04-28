@@ -167,8 +167,8 @@ const OrderModal = ({ onClose }) => {
 
 
 
-
-        <button className="track-btn">Track your order</button>
+<a href="https://wa.me/номер_телефона">  <button className="track-btn">Track your order</button></a>
+       
 
         <div className="foot"></div>
       </div>

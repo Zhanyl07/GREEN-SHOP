@@ -3,26 +3,52 @@ import "../Categories/Categories.scss";
 import { useSelector, useDispatch } from "react-redux";
 import { addWish, deleteWish } from "../../redux/Wish/WishSlice";
 import { addCart, removeCart } from "../../redux/Cart/CartSlice";
-import { Link } from "react-router-dom";
 import sale from "../../assets/svg/sale.svg";
 import cart from "../../assets/svg/cart.svg";
 import wishlist from "../../assets/svg/wishlist.svg";
 import wishlistFilled from "../../assets/svg/wishlist-filled.svg";
 import search from "../../assets/svg/search.svg";
 import productData from "../../data/products.json";
-
+import SearchBar from "../Search/SearchBar";
 const Categories = () => {
   const dispatch = useDispatch();
   const { items: wishlistItems } = useSelector((state) => state.wishlist);
   const { ali: cartItems } = useSelector((state) => state.carts);
 
   const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
+  const [minPrice, setMinPrice] = useState(0);
+  const [maxPrice, setMaxPrice] = useState(0);
+  const [selectedMin, setSelectedMin] = useState(0);
+  const [selectedMax, setSelectedMax] = useState(0);
   const [cartMessage, setCartMessage] = useState("");
   const [wishMessage, setWishMessage] = useState("");
 
   useEffect(() => {
     setProducts(productData);
   }, []);
+
+  // Установка цен после загрузки продуктов
+  useEffect(() => {
+    if (products.length) {
+      const prices = products.map((p) => p.price);
+      const min = Math.min(...prices);
+      const max = Math.max(...prices);
+      setMinPrice(min);
+      setMaxPrice(max);
+      setSelectedMin(min);
+      setSelectedMax(max);
+      setFilteredProducts(productData); // показываем всё сначала
+    }
+  }, [products]);
+
+  // Автофильтр по цене
+  useEffect(() => {
+    const result = products.filter(
+      (product) => product.price >= selectedMin && product.price <= selectedMax
+    );
+    setFilteredProducts(result);
+  }, [selectedMin, selectedMax, products]);
 
   const isWishlisted = (productId) =>
     wishlistItems.some((item) => item.id === productId);
@@ -33,11 +59,7 @@ const Categories = () => {
     if (!isInCart(product.id)) {
       dispatch(addCart(product));
       setCartMessage(`Товар "${product.name}" добавлен в корзину`);
-      
-      // Билдирүүнү 2 секунддан кийин жоюу
-      setTimeout(() => {
-        setCartMessage("");
-      }, 2000);
+      setTimeout(() => setCartMessage(""), 2000);
     }
   };
 
@@ -50,12 +72,8 @@ const Categories = () => {
       dispatch(deleteWish(product.id));
     } else {
       dispatch(addWish(product));
-      setWishMessage(`Товар "${product.name}" добавлен в изобранное`);
-
-      // Билдирүүнү 2 секунддан кийин жоюу
-      setTimeout(() => {
-        setWishMessage("");
-      }, 2000);
+      setWishMessage(`Товар "${product.name}" добавлен в избранное`);
+      setTimeout(() => setWishMessage(""), 2000);
     }
   };
 
@@ -68,15 +86,28 @@ const Categories = () => {
             <li>House Plants</li>
           </ul>
 
+          {/* Фильтр по цене */}
           <div className="price-filter">
             <h3>Price Range</h3>
             <div className="slider-wrapper">
-              <input type="range" min={39} max={2000} />
+              <input
+                type="range"
+                min={minPrice}
+                max={maxPrice}
+                value={selectedMin}
+                onChange={(e) => setSelectedMin(Number(e.target.value))}
+              />
+              <input
+                type="range"
+                min={minPrice}
+                max={maxPrice}
+                value={selectedMax}
+                onChange={(e) => setSelectedMax(Number(e.target.value))}
+              />
             </div>
             <div className="range-values">
-              Price: <span>$39</span> <span>-</span> <span>$1230</span>
+              Price: <span>${selectedMin}</span> - <span>${selectedMax}</span>
             </div>
-            <button className="filter-btn">Filter</button>
           </div>
 
           <div className="size">
@@ -88,7 +119,8 @@ const Categories = () => {
             </ul>
           </div>
 
-          <div className="sale-img">
+
+<div className="sale-img">
             <img src={sale} alt="sale" />
           </div>
         </div>
@@ -100,19 +132,13 @@ const Categories = () => {
               <li>New Arrivals</li>
               <li>Sale</li>
             </ul>
-            <div className="sort-wrapper">
-              <label htmlFor="sort-select">Sort by:</label>
-              <select id="sort-select" className="sort-select">
-                <option value="default">Default sorting</option>
-                <option value="price-low-high">Price: Low to High</option>
-                <option value="price-high-low">Price: High to Low</option>
-                <option value="newest">Newest</option>
-              </select>
-            </div>
           </div>
 
+          {/* Поиск */}
+          <SearchBar products={products} setFilteredProducts={setFilteredProducts} />
+
           <div className="bottom-plants">
-            {products.map((product) => (
+            {filteredProducts.map((product) => (
               <div className="box" key={product.id}>
                 <div className="top-card">
                   <div className="discount">
@@ -153,29 +179,8 @@ const Categories = () => {
         </div>
       </div>
 
-      {/* Билдирүүлөр */}
-      {cartMessage && (
-        <div className="cart-message">{cartMessage}</div>
-      )}
-      {wishMessage && (
-        <div className="wish-message">{wishMessage}</div>
-      )}
-
-      <div className="pagination">
-        <Link to="/">
-          <button className="page active">1</button>
-        </Link>
-        <Link to="/page2">
-          <button className="page active">2</button>
-        </Link>
-        <Link to="/page3">
-          <button className="page active">3</button>
-        </Link>
-        <Link to="/page4">
-          <button className="page active">4</button>
-        </Link>
-        <button className="page">&gt;</button>
-      </div>
+      {cartMessage && <div className="cart-message">{cartMessage}</div>}
+      {wishMessage && <div className="wish-message">{wishMessage}</div>}
     </div>
   );
 };
