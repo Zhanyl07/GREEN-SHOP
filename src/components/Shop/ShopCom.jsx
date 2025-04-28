@@ -30,7 +30,7 @@ function ShopCom() {
         <Link className="shophome" to={"/"}>
           Home{" "}
         </Link>
-
+/
         <Link className="shopshop" to={"/shop"}>
           Shop
         </Link>
