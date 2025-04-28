@@ -36,7 +36,7 @@ const Account = () => {
   return (
     <div className="account-page">
       <aside className="sidebar">
-        <h3>Hello, {user ? user.user.displayName : "Guest"}</h3> 
+        <h3>Hello, {user ? user?.user?.displayName : "Guest"}</h3> 
         <ul className="menu">
           <div className="flex">
             <img src={avatar} alt="Avatar" />
