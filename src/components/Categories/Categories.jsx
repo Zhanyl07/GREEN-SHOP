@@ -160,22 +160,6 @@ const Categories = () => {
       {wishMessage && (
         <div className="wish-message">{wishMessage}</div>
       )}
-
-      <div className="pagination">
-        <Link to="/">
-          <button className="page active">1</button>
-        </Link>
-        <Link to="/page2">
-          <button className="page active">2</button>
-        </Link>
-        <Link to="/page3">
-          <button className="page active">3</button>
-        </Link>
-        <Link to="/page4">
-          <button className="page active">4</button>
-        </Link>
-        <button className="page">&gt;</button>
-      </div>
     </div>
   );
 };
