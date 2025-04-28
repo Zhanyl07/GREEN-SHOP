@@ -3,6 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import banner1 from '../../assets/image/banner.png';
 import './Banner.scss';
 import { Link } from 'react-router-dom';
+import img1 from "../../assets/image/img1.png";
 
 function Banner() {
   const [index, setIndex] = useState(0);

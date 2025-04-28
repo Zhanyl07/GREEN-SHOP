@@ -14,23 +14,53 @@ import email from "../../assets/svg/shopemail.svg";
 import facebook from "../../assets/svg/shopfacebook.svg";
 import twitter from "../../assets/svg/shoptwitter.svg";
 import linkedin from "../../assets/svg/shoplinkedin.svg";
-import tr from '../../assets/image/tr.png'
-import tr2 from '../../assets/image/tr2.png'
-import tr3 from '../../assets/image/tr3.png'
-import tr4 from '../../assets/image/tr4.png'
+import tr from "../../assets/image/tr.png";
+import tr2 from "../../assets/image/tr2.png";
+import tr3 from "../../assets/image/tr3.png";
+import tr4 from "../../assets/image/tr4.png";
+
+import img1 from "../../assets/image/img1.png";
+import img2 from "../../assets/image/img2.png";
+import img3 from "../../assets/image/img3.png";
+import img4 from "../../assets/image/img4.png";
+import aloe from "../../assets/image/aloe.png";
+
 function ShopCom() {
   const [mainImage, setMainImage] = useState(shopgreen);
+  const [quantity, setQuantity] = useState(1);
+  const [selectedSize, setSelectedSize] = useState("M");
+
   const handleImageClick = (imageSrc) => {
     setMainImage(imageSrc);
+  };
+
+  const handleIncrease = () => {
+    setQuantity(prev => prev + 1);
+  };
+
+  const handleDecrease = () => {
+    setQuantity(prev => (prev > 1 ? prev - 1 : 1));
+  };
+
+  const handleSizeSelect = (size) => {
+    setSelectedSize(size);
+  };
+
+  const handleBuyNow = () => {
+    alert(`Buying ${quantity} item(s) of size ${selectedSize}`);
+  };
+
+  const handleAddToCart = () => {
+    alert(`Added ${quantity} item(s) of size ${selectedSize} to cart`);
   };
 
   return (
     <div className="shop">
       <div className="home-shop">
         <Link className="shophome" to={"/"}>
-          Home{" "}
+          Home
         </Link>
-/
+        /
         <Link className="shopshop" to={"/shop"}>
           Shop
         </Link>
@@ -39,30 +69,18 @@ function ShopCom() {
       <div className="shop-product">
         <div className="shop-img">
           <div className="shop-search">
-            <img src={search} alt="" />
+            <img src={search} alt="search" />
           </div>
           <div className="shop-flover">
             <div className="flover1">
-              <img
-                src={tr4}
-                alt=""
-                onClick={() => handleImageClick(tr4)} 
-              />
-              <img
-                src={tr}
-                alt=""
-                onClick={() => handleImageClick(tr)}
-              />
-              <img
-                src={tr2}
-                alt=""
-                onClick={() => handleImageClick(tr2)}
-              />
-              <img
-                src={tr3}
-                alt=""
-                onClick={() => handleImageClick(tr3)}
-              />
+              {[tr4, tr, tr2, tr3].map((img, idx) => (
+                <img
+                  key={idx}
+                  src={img}
+                  alt={`Thumbnail ${idx}`}
+                  onClick={() => handleImageClick(img)}
+                />
+              ))}
             </div>
             <div className="flover2">
               <img src={mainImage} alt="Main Product" />
@@ -76,23 +94,22 @@ function ShopCom() {
             <div className="daisy-price">
               <p>$119.00</p>
               <div className="stars">
-                <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={star} alt="" />
-                <img src={graystar} alt="" />
+                {[...Array(4)].map((_, i) => (
+                  <img key={i} src={star} alt="star" />
+                ))}
+                <img src={graystar} alt="gray star" />
                 <span>19 Customer Review</span>
               </div>
             </div>
           </div>
+
           <div className="shop-border"></div>
+
           <div className="short">
             <h3>Short Description:</h3>
             <p>
               The ceramic cylinder planters come with a wooden stand to help
-              elevate your plants off the ground. The ceramic cylinder planters
-              come with a wooden stand to help elevate your plants off the
-              ground.{" "}
+              elevate your plants off the ground.
             </p>
           </div>
 
@@ -100,29 +117,34 @@ function ShopCom() {
             <div className="size">
               <p>Size:</p>
               <div className="size-img">
-                <p>S</p>
-                <p>M</p>
-                <p>L</p>
-                <p>XL</p>
+                {["S", "M", "L", "XL"].map((size) => (
+                  <p
+                    key={size}
+                    className={selectedSize === size ? "selected" : ""}
+                    onClick={() => handleSizeSelect(size)}
+                  >
+                    {size}
+                  </p>
+                ))}
               </div>
             </div>
 
             <div className="shop-button">
               <div className="minus-btn">
-                <button>-</button>
-                <p>1</p>
-                <button>+</button>
+                <button onClick={handleDecrease}>-</button>
+                <p>{quantity}</p>
+                <button onClick={handleIncrease}>+</button>
               </div>
+
               <div className="buy-btn">
-                <button>BUY NOW</button>
-                <Link to="/shopingcart">
-                  <button>ADD TO CART</button>
-                </Link>
+                <button onClick={handleBuyNow}>BUY NOW</button>
+                <button onClick={handleAddToCart}>ADD TO CART</button>
               </div>
+
               <div className="wish-btn">
                 <Link to={"/wishlist"}>
                   <button>
-                    <img src={heart} alt="" />
+                    <img src={heart} alt="wishlist" />
                   </button>
                 </Link>
               </div>
@@ -144,16 +166,17 @@ function ShopCom() {
             </div>
 
             <div className="share">
-              <p>Share this products:</p>
-              <img src={facebook} alt="" />
-              <img src={twitter} alt="" />
-              <img src={linkedin} alt="" />
-              <img src={email} alt="" />
+              <p>Share this product:</p>
+              <img src={facebook} alt="facebook" />
+              <img src={twitter} alt="twitter" />
+              <img src={linkedin} alt="linkedin" />
+              <img src={email} alt="email" />
             </div>
           </div>
         </div>
       </div>
 
+      {/* Описание продукта и связанные товары оставлю без изменений, у тебя там все нормально */}
       <div className="description">
         <div className="des-link">
           <Link className="des-product" to={"/shop"}>
@@ -229,15 +252,65 @@ function ShopCom() {
         <div className="line"></div>
 
         <div className="oll">
-          {[...Array(8)].map((_, i) => (
-            <div className="rel-product" key={i}>
+            <div className="rel-product">
               <img src={green} alt="" />
+              
+              
               <div className="rel-text">
                 <p>Beach Spider Lily</p>
                 <span>$129.00</span>
               </div>
             </div>
-          ))}
+
+            <div className="rel-product">
+              <img src={img1} alt="" />
+              
+              
+              <div className="rel-text">
+                <p>Beach Spider Lily</p>
+                <span>$129.00</span>
+              </div>
+            </div>
+
+            <div className="rel-product">
+              <img src={img2} alt="" />
+              
+              
+              <div className="rel-text">
+                <p>Beach Spider Lily</p>
+                <span>$129.00</span>
+              </div>
+            </div>
+
+            <div className="rel-product">
+              <img src={img3} alt="" />
+              
+              
+              <div className="rel-text">
+                <p>Beach Spider Lily</p>
+                <span>$129.00</span>
+              </div>
+            </div>
+
+            <div className="rel-product">
+              <img src={img4} alt="" />
+              
+              
+              <div className="rel-text">
+                <p>Beach Spider Lily</p>
+                <span>$129.00</span>
+              </div>
+            </div>
+
+            <div className="rel-product">
+              <img src={aloe} alt="" />
+              
+              
+              <div className="rel-text">
+                <p>Beach Spider Lily</p>
+                <span>$129.00</span>
+              </div>
+            </div>
         </div>
       </div>
     </div>
