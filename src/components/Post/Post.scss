@@ -14,10 +14,18 @@
             margin-top: 15px;
         }
     }
-
+.btm-00{
+    display: flex;
+    gap: 60px;
     .bottom-post {
         width: 268px;
-        
+        .post-img{
+            img{
+                width: 268px;
+               height: 195.17px;
+               object-fit: cover;
+            }
+        }
         .post-texts {
             padding: 10px;
             background-color: #f4f4f4;
@@ -51,4 +59,5 @@
             }
         }
     }
+}
 }

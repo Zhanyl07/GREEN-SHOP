@@ -2,7 +2,7 @@ import React from 'react'
 import "./WishList.scss"
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
-import { deleteWish } from '../../redux/wish/wishSlice'
+import xdd from '../../assets/svg/x.svg'
 import banner from "../../assets/image/banner.png"
 
 function WishList() {
@@ -23,18 +23,17 @@ function WishList() {
                         <div className='card-img'>
                             <div className='send'>
                                 <p>-35%</p>
-                                <img onClick={() => dispatch(deleteWish(data.id))} src="" alt="" />
+                                <img onClick={() => dispatch(deleteWish(data.id))} src={xdd} alt="" />
                             </div>
                             <div className='image'>
                                 <img src={banner} alt="" />
                             </div>
                             <button className='button'>
-                                <img src="" alt="" />
                                 <span>Add To Cart</span>
                             </button>
                         </div>
                         <div className='card-texts'>
-                            <h2>Gucci duffle bag</h2>
+                            <h2>{data.name}</h2>
                             <div className='price'>
                                 <p>$960</p>
                                 <del>$1160</del>

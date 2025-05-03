@@ -3,6 +3,7 @@ import Layout from "./components/Layout/Layout";
 import Home from './pages/Home';
 import Shopm from './pages/Shopm';
 import Cart from "./pages/Cart";
+import Search1 from "./pages/Search1";
 import AuthForm from "./auth/AuthForm";
 import ShopingCartPage from "./pages/ShopingCartPage";
 import ProductCheckout from "./pages/ProductCheckout";
@@ -49,6 +50,10 @@ export const myRouter = createBrowserRouter([
       {
         path: "/blog/:id",
         element: <BlogDetails/>
+      },
+      {
+        path: "/search",
+        element: <Search1/>
       },
       {
       path: "/plantscare",
