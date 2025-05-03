@@ -179,8 +179,15 @@ const Categories = () => {
         </div>
       </div>
 
-      {cartMessage && <div className="cart-message">{cartMessage}</div>}
-      {wishMessage && <div className="wish-message">{wishMessage}</div>}
+
+      {/* Билдирүүлөр */}
+      {cartMessage && (
+        <div className="cart-message">{cartMessage}</div>
+      )}
+      {wishMessage && (
+        <div className="wish-message">{wishMessage}</div>
+      )}
+
     </div>
   );
 };
