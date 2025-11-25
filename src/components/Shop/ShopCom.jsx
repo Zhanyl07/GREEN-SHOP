@@ -176,7 +176,6 @@ function ShopCom() {
         </div>
       </div>
 
-      {/* Описание продукта и связанные товары оставлю без изменений, у тебя там все нормально */}
       <div className="description">
         <div className="des-link">
           <Link className="des-product" to={"/shop"}>

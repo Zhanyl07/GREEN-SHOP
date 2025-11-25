@@ -14,7 +14,7 @@ import About from "./components/About/About";
 import Post from "./components/Post/Post";
 import Profile from "./components/Profile/Index";
 import Account from "./pages/Account1";
-import WishList from "./components/WishList/Wishlist";
+import WishList from "./components/WishList/WishList";
 import LoginModal from './pages/LoginModal';
 import RegisterModal from "./pages/RegisterModal";
 import BlogsGREEN from "./pages/BlogsGREEN";
